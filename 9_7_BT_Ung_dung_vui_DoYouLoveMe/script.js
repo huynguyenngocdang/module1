@@ -11,3 +11,7 @@ function changePos() {
     console.log(x);
     console.log(y);
 }
+
+function yesBtn() {
+    alert ("<3");
+}
