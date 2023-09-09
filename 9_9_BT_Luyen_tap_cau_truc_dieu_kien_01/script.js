@@ -153,51 +153,42 @@ function functionBai7() {
 
   if (dienTieuThu <= 50) {
     tienDien = dienTieuThu * mucDien1;
-    vat = tienDien * 10 /100;
+    vat = tienDien * 8 /100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 0: ";
-    document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
-    document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
-    document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
+
   } else if (dienTieuThu <= 100) {
     tienDien = (dienTieuThu-50) * mucDien2 + mucDien1*50;
-    vat = tienDien * 10 /100;
+    vat = tienDien * 8 /100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 2: ";
-    document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
-    document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
-    document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
+
   } else if (dienTieuThu <= 200) {
     tienDien = (dienTieuThu-100) * mucDien3 + mucDien1*50 + mucDien2*50;
-    vat = tienDien * 10 /100;
+    vat = tienDien * 8 /100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 3: ";
-    document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
-    document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
-    document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
+
   } else if (dienTieuThu <= 300) {
     tienDien = (dienTieuThu-200) * mucDien4 + mucDien1*50 + mucDien2*50 + mucDien3*100;
-    vat = tienDien * 10 /100;
+    vat = tienDien * 8 /100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 4: ";
-    document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
-    document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
-    document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
+
   } else if (dienTieuThu <= 400) {
     tienDien = (dienTieuThu-300) * mucDien5 + mucDien1*50 + mucDien2*50 + mucDien3*100+ mucDien4*100;
-    vat = tienDien * 10 /100;
+    vat = tienDien * 8 /100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 5: ";
-    document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
-    document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
-    document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
+
   } else {
     tienDien = (dienTieuThu-400) * mucDien6 + mucDien1*50 + mucDien2*50 + mucDien3*100+ mucDien4*100+mucDien5*100;
-    vat = tienDien * 10 /100;
+    vat = tienDien * 8 /100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 6: ";
-    document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
-    document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
-    document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
+
   }
+  document.getElementById("resultBai7").innerHTML = new Intl.NumberFormat().format(tienDien) + " VND";
+  document.getElementById("vat").innerHTML = new Intl.NumberFormat().format(vat) + " VND";
+  document.getElementById("total").innerHTML = new Intl.NumberFormat().format(total) + " VND";
 }
