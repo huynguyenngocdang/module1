@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 3 variation 2</title>
+  </head>
+  <body>
+    <label for="a">a :</label>
+    <input type="number" name="" id="a" />
+    <label for="b">b :</label>
+    <input type="number" name="" id="b" />
+    <button type="button" id="idClick">Check a % b</button> <br />
+    Kết quả : <span id="resultPrint"></span>
+
+    <script>
+      var buttonCheckPressed = document.getElementById("idClick");
+      buttonCheckPressed.addEventListener("click", calculate);
+      function calculate() {
+        let x = document.getElementById("a").value;
+        let y = document.getElementById("b").value;
+        let z = x % y;
+        let result = z == 0 ? "a chia hết cho b" : "a không chia hết cho b";
+        console.log(z);
+        document.getElementById("resultPrint").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

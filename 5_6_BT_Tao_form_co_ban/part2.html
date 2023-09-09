@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid" style="background-color: bisque;">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 mt-5">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th
+                  colspan="2"
+                  class="text-uppercase text-primary text-start"
+                  style="background-color: aquamarine"
+                >
+                  Đăng ký học viên
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label class="control-label" for="name">Họ và tên:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Nhập họ tên"
+                    name="name"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="control-label" for="dob">Ngày sinh:</label>
+                </td>
+                <td>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dob"
+                    placeholder="Nhập họ tên"
+                    name="dob"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="control-label" for="gender">Giới tính:</label>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="gender"
+                      value="M"
+                    />
+                    <label class="form-check-label" for="gender">Nam</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="gender"
+                      value="F"
+                    />
+                    <label class="form-check-label" for="gender">Nữ</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="control-label" for="addr">Địa chỉ:</label>
+                </td>
+                <td>
+                    <textarea name="addr" id="addr" cols="83" rows="2" style="resize: none;"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="form-label" for="class">Lớp:</label>
+                </td>
+                <td>
+                    <select class="custom-select" id="class">
+                      <option selected> <span>&#8208;</span> Chọn lớp <span>&#8208;</span>  </option>
+                      <option value="1">Module 1</option>
+                      <option value="2">Module 2</option>
+                      <option value="3">Module 3</option>
+                    </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="control-label" for="email">Email:</label>
+                </td>
+                <td>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Nhập email"
+                    name="email"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="control-label" for="phone">Điện thoại:</label>
+                </td>
+                <td>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Nhập điện thoại"
+                    name="phone"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input
+                    type="submit"
+                    class="btn btn-dark"
+                    value="Gửi thông tin"
+                  />
+                  <input
+                    type="reset"
+                    class="btn btn-dark"
+                    value="Nhập lại"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

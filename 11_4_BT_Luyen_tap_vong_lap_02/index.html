@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Bài 1: In dãy Fibonaci <br />
+    <br />
+
+    <label for="inputFiboBai1">Count</label>
+    <input type="number" name="inputFiboBai1" id="inputFiboBai1" />
+    <button type="button" onclick="bai1Function()">Check</button>
+    <button type="button" onclick="reset()">Reset</button> <br />
+    <span id="resultBai1"></span> <br />
+    <hr />
+
+    Bài 2: Tính giai thừa của một số nguyên dương <br />
+    <br />
+
+    <label for="inputBai2">Count</label>
+    <input type="number" name="inputBai2" id="inputBai2" />
+    <button type="button" onclick="bai2Function()">Check</button>
+    <button type="button" onclick="reset()">Reset</button> <br />
+    <span id="resultBai2"></span> <br />
+    <hr />
+    Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau <br />
+
+    <label for="inputBai3">Số sao</label>
+    <input type="number" name="inputBai3" id="inputBai3" />
+
+    <button type="button" onclick="bai3FunctionA()">Tam giác A</button> &nbsp;
+    <button type="button" onclick="bai3FunctionB()">Tam giác B</button> &nbsp;
+    <button type="button" onclick="bai3FunctionC()">Tam giác C</button> &nbsp;
+    <button type="button" onclick="bai3FunctionD()">Tam giác D</button> &nbsp;
+    <button type="button" onclick="reset()">Reset</button>
+    <br />
+    <span id="resultBai3A"></span> <br />
+    <span id="resultBai3B"></span> <br />
+    <span id="resultBai3C"></span> <br />
+    <span id="resultBai3D"></span> <br />
+
+    <hr />
+    Bài 4: In hình chữ nhật <br>
+    <label for="inputBai4">Số sao</label>
+    <input type="number" name="inputBai4" id="inputBai4" />
+    <button type="button" onclick="bai4Function()">Chữ nhật</button> 
+    <button type="button" onclick="reset()">Reset</button><br />
+    <span id="resultBai4"></span>
+    <hr />
+
+    Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số
+    tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng. <br />
+    <table>
+        <tr>
+          <td><label for="totalLoan">Tổng số vay</label></td>
+          <td><input type="number" name="totalLoan" id="totalLoan" /></td>
+        </tr>
+        <tr>
+          <td><label for="totalLoanPeriod"></label>Số tháng vay</td>
+          <td>
+            <input type="number" name="totalLoanPeriod" id="totalLoanPeriod" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="monthlyInterestRate"></label>Lãi suất hằng tháng (%)</td>
+          <td>
+            <input
+              type="number"
+              name="monthlyInterestRate"
+              id="monthlyInterestRate"
+            />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <button type="button" onclick="bai5Function()">Check</button>
+      <button type="button" onclick="reset()">Reset</button>
+      <br />
+      
+      <span id="resultBai12"></span>
+      Số nợ còn lại <br>
+  
+      <span id="lichTraNo"></span>
+    <hr>
+    Bài 6: In hình trái tim <br>
+    <label for="inputBai6">Số sao (nên chia hết cho 2)</label>
+    <input type="number" name="inputBai6" id="inputBai6"> <br>
+    <button type="button" onclick="bai6Function()"> Check</button>
+    <button type="button" onclick="reset()">Reset</button> <br>
+    <span id="resultBai6"></span>
+
+    <hr />
+    <script src="script.js"></script>
+  </body>
+</html>

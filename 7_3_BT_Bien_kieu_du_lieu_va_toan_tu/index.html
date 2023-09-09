@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập biến, kiểu dữ liệu và toán tử</title>
+  </head>
+  <body>
+    <p>
+      <b>Bài 1:</b> Viết chương trình nhập điểm của một sinh viên cho các môn:
+      Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung bình và tổng của
+      những điểm này.
+    </p>
+    <br />
+    <label for="iDiemLy">Điểm Vật Lý: </label>
+    <input
+      type="number"
+      name="nDiemLy"
+      id="iDiemLy"
+      placeholder="Nhập điểm Lý"
+    />
+    <label for="iDiemHoa">Điểm Hóa: </label>
+    <input
+      type="number"
+      name="nDiemHoa"
+      id="iDiemHoa"
+      placeholder="Nhập điểm Hóa"
+    />
+    <label for="iDiemSinh">Điểm Sinh Học:</label>
+    <input
+      type="number"
+      name="nDiemSinh"
+      id="iDiemSinh"
+      placeholder="Nhập điểm Sinh"
+    />
+    <button type="button" id="bai1Button">Tính trung bình:</button> <br />
+    Tổng điểm 3 môn là: <span id="totalBai1"></span> <br />
+    Trung bình 3 môn là: <span id="averageBai1"></span> <br />
+    <hr />
+
+    <p>
+      <b>Bài 2:</b> Viết chương trình nhập một giá trị là độ 0C (Celsius) và
+      chuyển nó sang độ 0F (Fahrenheit). <br />
+      Hướng dẫn: C/5 = (F-32)/9
+    </p>
+    <br />
+    <label for="iDoC">Độ C</label>
+    <input type="number" name="nDoC" id="iDoC" placeholder="Nhập độ Celsius" />
+    <button type="button" id="bai2Button">Chuyển qua độ F</button> <br />
+    Độ F <span id="doFBai2"></span>
+    <br />
+    <hr />
+    <p><b>Bài 3:</b> Viết chương trình tính diện tích hình tròn</p>
+    <br />
+    <p><b>Bài 4:</b> Viết chương trình chu vi hình tròn</p>
+    <br />
+    <label for="iBanKinh"> Nhập bán kính hình tròn: </label>
+
+    <input type="number" name="nBanKinh" id="iBanKinh" />
+    <select name="metric" id="metric">
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+      </select>
+    <button type="button" id="bai3Button">Tính</button>
+    <br />
+    Chu vi hình tròn: <span id="resultChuVi"></span> <br />
+    Diện tích hình tròn: <span id="resultDienTich"></span> <br />
+
+    <script src="index.js"></script>
+  </body>
+</html>

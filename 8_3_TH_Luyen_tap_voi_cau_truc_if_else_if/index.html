@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .formPage{
+        width: 300px;   margin-left: auto;
+    margin-right: auto; padding-top: 50px;
+    }
+    .alignRight{
+        float: right;
+    }
+    .pwdCss{
+        margin-left: 4px;
+    }
+</style>
+<body>
+    <form class="formPage">
+        <fieldset>
+
+            <legend>Login</legend>
+            <label for="idUsername">Username :</label>
+            <input type="text" name="nameUsername" id="idUsername"> <br> <br>
+            <label for="idPwd">Password  : </label>
+            <input type="password" name="namePwd" id="idPwd" class="pwdCss"> <br> <br>  
+            <button class="alignRight" type="button" id="idBtn">Submit</button>
+        </fieldset>
+    </form>
+    <div class="formPage">
+        Result : <span id="resultPrint"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

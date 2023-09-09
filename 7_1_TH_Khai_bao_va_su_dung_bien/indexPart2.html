@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 2</title>
+  </head>
+  <body>
+    <label for="width"> width:</label>
+    <input type="number" name="width" id="width" />
+    <label for="height"> Height: </label>
+    <input type="number" name="height" id="height" />
+    <button type="button" id="resultButton">calculate</button><br />
+    Result is : <span id="result"></span>
+
+    <script>
+      var buttonResultPress = document.getElementById("resultButton");
+      buttonResultPress.addEventListener("click", calculate);
+
+      function calculate() {
+        var x = document.getElementById("width").value;
+        var y = document.getElementById("height").value;
+        var z = x * y;
+        document.getElementById("result").innerHTML = z;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alnright { text-align: right; }
+    </style>
+  </head>
+  <body>
+    Bài 1: Chuyển từ độ C sang độ F. <br />
+    <br />
+    <table>
+      <tr>
+        <td><label for="doC">Độ C</label></td>
+        <td><input type="number" name="doC" id="doC" /></td>
+        <td>
+          <button type="button" onclick="chuyenF()">Chuyển độ F</button> <br />
+          <br />
+          <button type="button" onclick="chuyenC()">Chuyển độ C</button>
+        </td>
+        <td><label for="doF">Độ F</label></td>
+        <td><input type="number" name="doF" id="doF" /></td>
+      </tr>
+    </table>
+    <br />
+    <hr />
+    Bài 2: Chuyển từ mét sang feet: <br />
+
+    <table>
+      <tr>
+        <td><label for="meter">Mét</label></td>
+        <td><input type="number" name="meter" id="meter" /></td>
+        <td>
+          <button type="button" onclick="chuyenFeet()">Chuyển Feet</button>
+          <br />
+          <br />
+          <button type="button" onclick="chuyenMet()">Chuyển Mét</button>
+        </td>
+        <td><label for="feet">Feet</label></td>
+        <td><input type="number" name="feet" id="feet" /></td>
+      </tr>
+    </table>
+    <hr />
+    Bài 3: Tính diện tích hình vuông khi biết cạnh a. <br />
+
+    <table>
+      <tr>
+        <td><label for="canhHinhVuong">Cạnh a</label></td>
+        <td><input type="number" name="canhHinhVuong" id="canhHinhVuong" /></td>
+        <td>
+          <button type="button" onclick="tinhDienTichVuong()">
+            Tính diện tích
+          </button>
+        </td>
+      </tr>
+    </table>
+    Diện tích : <span id="dienTichHinhVuong"></span>
+
+    <br />
+    <hr />
+    Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.
+    <br />
+
+    <table>
+      <tr>
+        <td><label for="aChuNhat">Cạnh a</label></td>
+        <td><input type="number" name="aChuNhat" id="aChuNhat" /></td>
+        <td><label for="bChuNhat">Cạnh b</label></td>
+        <td><input type="number" name="bChuNhat" id="bChuNhat" /></td>
+        <td>
+          <button type="button" onclick="tinhDienTichChuNhat()">
+            Tính diện tích
+          </button>
+        </td>
+      </tr>
+    </table>
+    Diện tích : <span id="dienTichChuNhat"></span> <br />
+    <hr />
+    Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b. <br />
+
+    <table>
+      <tr>
+        <td><label for="aTamGiacVuong">Cạnh a</label></td>
+        <td><input type="number" name="aTamGiacVuong" id="aTamGiacVuong" /></td>
+        <td><label for="bTamGiacVuong">Cạnh b</label></td>
+        <td><input type="number" name="bTamGiacVuong" id="bTamGiacVuong" /></td>
+        <td>
+          <button type="button" onclick="tinhDienTichTamGiacVuong()">
+            Tính diện tích
+          </button>
+        </td>
+      </tr>
+    </table>
+    Diện tích : <span id="dienTichTamGiacVuong"></span> <br />
+    <hr />
+    Bài 6: Giải phương trình bậc 1. <br />
+
+    <table>
+      <tr>
+        <td><input type="number" name="bai6a" id="bai6a" /></td>
+        <td>x +</td>
+        <td><input type="number" name="bai6b" id="bai6b" /></td>
+        <td>= 0</td>
+        <td>
+          <button type="button" onclick="timNghiemBac1()">Tìm a, b</button>
+        </td>
+      </tr>
+    </table>
+    <br />
+    Result: <span id="resultBai6"></span>
+    <hr />
+    Bài 7: Giải phương trình bậc 2. <br />
+    <table>
+      <tr>
+        <td><input type="number" name="bai7a" id="bai7a" placeholder="a" /></td>
+        <td>x&#178; +</td>
+        <td><input type="number" name="bai7b" id="bai7b" placeholder="b" /></td>
+        <td>x +</td>
+        <td><input type="number" name="bai7c" id="bai7c" placeholder="c" /></td>
+        <td>= 0</td>
+        <td>
+          <button type="button" onclick="timNghiemBac2()">Tìm a, b, c</button>
+        </td>
+      </tr>
+    </table>
+    Result: <span id="resultBai7"></span>
+    <hr />
+    Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một
+    số nguyên là tuổi của một người khi nhỏ 120 và lớn hơn 0. <br />
+    <label for="tuoiBai8"></label>
+    <input type="number" name="tuoiBai8" id="tuoiBai8" />
+    <button type="button" onclick="tinhTuoiBai8()">Check</button> <br />
+    Result: <span id="resultBai8"></span>
+    <hr />
+    Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam
+    giác.<br />
+    <table>
+      <tr>
+        <td>Cạnh A</td>
+        <td><input type="number" name="bai9a" id="bai9a" /></td>
+      </tr>
+      <tr>
+        <td>Cạnh B</td>
+        <td><input type="number" name="bai9b" id="bai9b" /></td>
+      </tr>
+      <tr>
+        <td>Cạnh C</td>
+        <td><input type="number" name="bai9c" id="bai9c" /></td>
+      </tr>
+    </table>
+    <button type="button" onclick="bai9Function()">Check</button> <br />
+    Result: <span id="resultBai9"></span>
+    <hr />
+    Bài 10: Viết chương trình tính giá điện. <br />
+
+    Theo khoản 4.1 phụ lục ban hành kèm theo Quyết định 648/QĐ_BCT ngày
+    20/3/2019 về điều chỉnh mức giá bán lẻ điện bình quân và quy định giá bán
+    điện, giá bán lẻ điện sinh hoạt sẽ được tính theo 6 bậc như sau (cập nhật
+    7/9/2023): <br>
+    <a href="https://www.evn.com.vn/c3/calc/Cong-cu-tinh-hoa-don-tien-dien-9-172.aspx" target="_blank">trang tính EVN</a>
+    <ul>
+      <li>Bậc 1 (0 đến 50kWh): 1.728 đồng/kWh</li>
+      <li>Bậc 2 (51 đến 100kWh): 1.786 đồng/kWh</li>
+      <li>Bậc 3 (101 đến 200 kWh): 2.074 đồng/kWh</li>
+      <li>Bậc 4 (201 đến 300 kWh): 2.612 đồng/kWh</li>
+      <li>Bậc 5 (301 đến 400 kWh): 2.919 đồng/kWh</li>
+      <li>Bậc 6 (401 kWh trở lên): 3.015 đồng/kWh</li>
+    </ul>
+
+    <label for="dienTieuThu">Điện tiêu thụ(đơn vị kWh): </label>
+    <input type="number" name="dienTieuThu" id="dienTieuThu" />
+    <button type="button" onclick="bai10Function()">Check</button> <br />
+    Kết quả:
+    <table>
+      <tr>
+        <td class="alnright"><span id="mucDien"></span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="alnright">Tổng chưa thuế:</td>
+        <td class="alnright"><span id="resultBai10"></span></td>
+      </tr>
+      <tr>
+        <td class="alnright">Thuế suất (8%):</td>
+        <td class="alnright"><span id="vat"></span></td>
+      </tr>
+      <tr>
+        <td>Tổng cộng :</td>
+        <td class="alnright"><span id="total"></span></td>
+      </tr>
+    </table>
+    <br />
+    <hr />
+
+    Bài 11: Viết chương trình tính thuế thu nhập cá nhân. <br />
+    <label for="luong">Tổng lương sau giảm trừ</label>
+    <input type="number" name="luong" id="luong" />
+    <button type="button" onclick="bai11Function()">Tính Thuế TNCN</button>
+    <br />
+    Result: <span id="resultBai11"></span>
+    <hr />
+
+    Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số
+    tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng. <br />
+    <table>
+      <tr>
+        <td><label for="totalLoan">Tổng số vay</label></td>
+        <td><input type="number" name="totalLoan" id="totalLoan" /></td>
+      </tr>
+      <tr>
+        <td><label for="totalLoanPeriod"></label>Số tháng vay</td>
+        <td>
+          <input type="number" name="totalLoanPeriod" id="totalLoanPeriod" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="monthlyInterestRate"></label>Lãi suất hằng tháng (%)
+        </td>
+        <td>
+          <input
+            type="number"
+            name="monthlyInterestRate"
+            id="monthlyInterestRate"
+          />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <button type="button" onclick="bai12Function()">Check</button>
+    <br />
+    <br />
+    <span id="resultBai12"></span>
+    Số nợ còn lại <br />
+
+    <span id="lichTraNo"></span>
+    <hr />
+    <script src="script.js"></script>
+  </body>
+</html>

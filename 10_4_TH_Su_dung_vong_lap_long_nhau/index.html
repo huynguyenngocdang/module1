@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <script>
+      let line = "";
+      line = "<table border='1' width='300' cellspacing='0' cellpadding='3' id='mytable' >";
+      for (let i = 1; i <= 10; i++) {
+        line += "<tr>";
+        for (let j = 1; j <= 10; j++) {
+          line += "<td>" + i * j + "</td>";
+            
+        }
+        line += "</tr>";
+      }
+      line += "</table>";
+      document.write(line);
+    </script>
+  </body>
+</html>

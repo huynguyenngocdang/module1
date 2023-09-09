@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 2 variation 1</title>
+  </head>
+  <body>
+    <label for="width"> width:</label>
+    <input type="number" name="width" id="width" />
+    <label for="height"> Height: </label>
+    <input type="number" name="height" id="height" />
+    <!-- Get data by event listener -->
+    <button type="button" id="getdata">get data</button>
+    <!-- Print calculated data by clicking result button  -->
+    <button type="button" id="resultButton">calculate</button><br />
+    Result is : <span id="result"></span>
+
+    <script>
+      var buttonDataPress = document.getElementById("getdata");
+      var buttonResultPress = document.getElementById("resultButton");
+      buttonDataPress.addEventListener("click", calculate);
+      buttonResultPress.addEventListener("click", print);
+      function calculate() {
+        var x = document.getElementById("width").value;
+        var y = document.getElementById("height").value;
+        var z = x * y;
+        return z;
+      }
+      function print() {
+        var total = calculate();
+        document.getElementById("result").innerHTML = total;
+      }
+    </script>
+  </body>
+</html>

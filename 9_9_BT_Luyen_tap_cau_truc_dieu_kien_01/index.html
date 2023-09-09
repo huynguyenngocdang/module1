@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+  </head>
+  <body>
+    Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+    <br />
+    <label for="a1">A :</label>
+    <input type="number" name="a1" id="a1" />
+    <label for="b1">B :</label>
+    <input type="number" name="b1" id="b1" />
+    <button type="button" onclick="functionBai1()">Check</button> <br />
+    Kết quả: <span id="resultBai1"></span>
+
+    <hr />
+    Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện
+    vào học lớp 10. <br />
+    <label for="age">Tuổi (14-17) :</label>
+    <input type="number" name="age" id="age" />
+
+    <button type="button" onclick="functionBai2()">Check</button> <br />
+    Kết quả: <span id="resultBai2"></span>
+
+    <hr />
+    Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người
+    dùng biết số đó là lớn hay nhỏ hơn 0 <br />
+    <label for="numberWhole">Số nguyên :</label>
+    <input type="number" name="numberWhole" id="numberWhole" />
+
+    <button type="button" onclick="functionBai3()">Check</button> <br />
+    Kết quả: <span id="resultBai3"></span>
+    <hr />
+    Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó <br />
+
+    <table>
+      <tr>
+        <td><label for="number1">Số thứ nhất</label></td>
+        <td><input type="number" name="number1" id="number1" /></td>
+      </tr>
+      <tr>
+        <td><label for="number2">Số thứ hai</label></td>
+        <td><input type="number" name="number2" id="number2" /></td>
+      </tr>
+      <tr>
+        <td><label for="number3">Số thứ ba</label></td>
+        <td><input type="number" name="number3" id="number3" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="button" onclick="functionBai4()">Check</button> <br />
+        </td>
+      </tr>
+    </table>
+
+    Kết quả: <span id="resultBai4"></span>
+    <hr />
+    Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm
+    thi giữa kỳ, điểm thi cuối kỳ <br />
+
+    <table>
+      <tr>
+        <td><label for="averageTotal"> Điểm trung bình các môn</label></td>
+        <td><input type="number" name="averageTotal" id="averageTotal" /></td>
+      </tr>
+      <tr>
+        <td><label for="averageLowest">Điểm trung bình thấp nhất</label></td>
+        <td><input type="number" name="averageLowest" id="averageLowest" /></td>
+      </tr>
+      <tr>
+        <td><label for="averageMth">Điểm trung bình Toán</label></td>
+        <td><input type="number" name="averageMth" id="averageMth" /></td>
+      </tr>
+      <tr>
+        <td><label for="averageLit">Điểm trung bình Văn</label></td>
+        <td><input type="number" name="averageLit" id="averageLit" /></td>
+      </tr>
+      <tr>
+        <td><label for="averageEng">Điểm trung bình Anh</label></td>
+        <td><input type="number" name="averageEng" id="averageEng" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="button" onclick="functionBai5()">Check</button> <br />
+        </td>
+      </tr>
+    </table>
+    Kết quả: <span id="resultBai5"></span>
+    <hr />
+    Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng <br />
+    Ví dụ: Doanh nghiệp đề xuất cách tính hoa hồng như sau: <br />
+    <ul>
+      <li>Mức 0: Từ 0 tới dưới 280 triệu đồng: Mức hoa hồng nhận được là 0%</li>
+      <li>
+        Mức 1: Từ 280 triệu &minus; 500 triệu đồng: Mức hoa hồng: 1,5% doanh thu
+      </li>
+      <li>
+        Mức 2: Từ 500 triệu &minus; 800 triệu đồng: Mức hoa hồng: 3% doanh thu
+      </li>
+      <li>Mức 3: Trên 800 triệu đồng: Mức hoa hồng: 4% doanh thu</li>
+    </ul>
+    <label for="doanhThu">Doanh thu (đơn vị triệu đồng): </label>
+    <input type="number" name="doanhThu" id="doanhThu" />
+    <button type="button" onclick="functionBai6()">Check</button> <br />
+    Kết quả:
+    <span id="commissionLevel"></span>
+    <span id="resultBai6"></span> <br />
+
+    <hr />
+    Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+    <br />
+    <p>
+      Theo khoản 4.1 phụ lục ban hành kèm theo Quyết định 648/QĐ_BCT ngày
+      20/3/2019 về điều chỉnh mức giá bán lẻ điện bình quân và quy định giá bán
+      điện, giá bán lẻ điện sinh hoạt sẽ được tính theo 6 bậc như sau (cập nhật 7/9/2023):
+      <ul>
+        <li>Bậc 1 (0 đến 50kWh): 1.728 đồng/kWh</li>
+        <li>Bậc 2 (51 đến 100kWh): 1.786 đồng/kWh</li>
+        <li>Bậc 3 (101 đến 200 kWh): 2.074 đồng/kWh</li>
+        <li>Bậc 4 (201 đến 300 kWh): 2.612 đồng/kWh</li>
+        <li>Bậc 5 (301 đến 400 kWh): 2.919 đồng/kWh</li>
+        <li>Bậc 6 (401 kWh trở lên): 3.015 đồng/kWh</li>
+      </ul>
+    </p>
+    <label for="dienTieuThu">Điện tiêu thụ(đơn vị kWh): </label>
+    <input type="number" name="dienTieuThu" id="dienTieuThu" />
+    <button type="button" onclick="functionBai7()">Check</button> <br />
+    Kết quả:
+    <table>
+        <tr>
+            <td><span id="mucDien"></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tổng chưa thuế:</td>
+            <td><span id="resultBai7"></span></td>
+        </tr>
+        <tr>
+            <td>Thuế suất (10%):</td>
+            <td><span id="vat"></span></td>
+        </tr>
+        <tr>
+            <td>Tổng cộng :</td>
+            <td><span id="total"></span></td>
+        </tr>
+    </table>
+     <br />
+
+    <script src="script.js"></script>
+  </body>
+</html>

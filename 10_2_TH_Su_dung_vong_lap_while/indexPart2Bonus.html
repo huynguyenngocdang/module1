@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Let's create a pyramid <br>
+    <label for="inputNumber">Input pyramid height</label>
+    <input type="number" name="inputNumber" id="inputNumber">
+    <button type="button" onclick="build()">Build</button> <br>
+    <span id="result"></span>
+    <script>
+        function build() {
+            let inputNumber = document.getElementById("inputNumber").value;
+            let i = 0;
+            let text = "";
+            while (i < inputNumber) {
+                text += "<hr width ="+i+"%>";
+                i++;
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

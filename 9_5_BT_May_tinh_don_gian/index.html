@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .classBtn {
+        width: 50px;
+        height: 50px;
+      }
+      .classView {
+        width: 204px;
+        height: 50px;
+      }
+      .container{
+        margin: auto;
+  width: 220px;
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td colspan="4">
+            <input type="text" id="idView" class="classView" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td class="cellBtn">
+            <button type="button" class="classBtn" onclick="inputValue(1)">1</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn" onclick="inputValue(2)" >2</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(3)">3</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue('+')">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(4)">4</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(5)">5</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(6)">6</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue('-')">-</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(7)">7</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(8)">8</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(9)">9</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue('*')">*</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="pageClear()">C</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue(0)">0</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="result()">=</button>
+          </td>
+          <td class="cellBtn">
+            <button type="button" class="classBtn"onclick="inputValue('/')">/</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
