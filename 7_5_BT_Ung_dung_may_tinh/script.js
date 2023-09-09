@@ -38,3 +38,20 @@ function test() {
   let a = document.getElementById("idInputA").value;
   return a;
 }
+
+let view = document.getElementById("idView");
+
+function inputValue(value) {
+  view.value += value;
+}
+
+function result() {
+  let result = eval(view.value);
+  view.value = result;
+  
+}
+
+function pageClear() {
+  view.value = "";
+  location.reload()
+}
