@@ -111,49 +111,18 @@ function tinhTuoiBai8() {
 }
 
 function bai9Function() {
-  let a = document.getElementById("bai9a").value;
-  let b = document.getElementById("bai9b").value;
-  let c = document.getElementById("bai9c").value;
-  if (a > 0 && b > 0 && c > 0) {
-    // switch (true) {
-    //   case a >= b + c:
+  let a = parseInt(document.getElementById("bai9a").value);
+  let b = parseInt(document.getElementById("bai9b").value);
+  let c = parseInt(document.getElementById("bai9c").value);
+  let textResult = "";
 
-    //   case b >= a + c:
-
-    //   case c >= a + b:
-    //     document.getElementById("resultBai9").innerHTML =
-    //       "Đây không là 3 cạnh tam giác";
-    //     console.log("case pos");
-    //     break;
-
-    //   default:
-    //     document.getElementById("resultBai9").innerHTML =
-    //       "Đây là 3 cạnh tam giác";
-    //     console.log("case neg");
-    //     break;
-    // }
-    if (a < b + c) {
-      if (b < a + c) {
-        if (c < a + b) {
-          document.getElementById("resultBai9").innerHTML =
-            "Đây là 3 cạnh tam giác";
-        } else {
-          document.getElementById("resultBai9").innerHTML =
-            "Đây không phải 3 cạnh tam giác";
-        }
-      } else {
-        document.getElementById("resultBai9").innerHTML =
-          "Đây không phải 3 cạnh tam giác";
-      }
-    } else {
-      document.getElementById("resultBai9").innerHTML =
-        "Đây không phải 3 cạnh tam giác";
-    }
+  if (a + b > c && b + c > a && a + c > b && a > 0 && b > 0 && c > 0) {
+    textResult = "Đây là tam giác";
   } else {
-    document.getElementById("resultBai9").innerHTML =
-      "Đây không phải 3 cạnh tam giác";
-    console.log("case else");
+    textResult = "Đây không phải là tam giác";
   }
+  
+  document.getElementById("resultBai9").innerHTML = textResult;
 }
 
 function bai10Function() {
@@ -173,19 +142,16 @@ function bai10Function() {
     vat = (tienDien * 8) / 100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 0: ";
-
   } else if (dienTieuThu <= 100) {
     tienDien = (dienTieuThu - 50) * mucDien2 + mucDien1 * 50;
     vat = (tienDien * 8) / 100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 2: ";
-;
   } else if (dienTieuThu <= 200) {
     tienDien = (dienTieuThu - 100) * mucDien3 + mucDien1 * 50 + mucDien2 * 50;
     vat = (tienDien * 8) / 100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 3: ";
-
   } else if (dienTieuThu <= 300) {
     tienDien =
       (dienTieuThu - 200) * mucDien4 +
@@ -195,7 +161,6 @@ function bai10Function() {
     vat = (tienDien * 8) / 100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 4: ";
-
   } else if (dienTieuThu <= 400) {
     tienDien =
       (dienTieuThu - 300) * mucDien5 +
@@ -206,7 +171,6 @@ function bai10Function() {
     vat = (tienDien * 8) / 100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 5: ";
-
   } else {
     tienDien =
       (dienTieuThu - 400) * mucDien6 +
@@ -218,14 +182,13 @@ function bai10Function() {
     vat = (tienDien * 8) / 100;
     total = tienDien + vat;
     document.getElementById("mucDien").innerHTML = "Mức 6: ";
-
   }
   document.getElementById("resultBai10").innerHTML =
-  new Intl.NumberFormat().format(tienDien) + " VND";
-document.getElementById("vat").innerHTML =
-  new Intl.NumberFormat().format(vat) + " VND";
-document.getElementById("total").innerHTML =
-  new Intl.NumberFormat().format(total) + " VND";
+    new Intl.NumberFormat().format(tienDien) + " VND";
+  document.getElementById("vat").innerHTML =
+    new Intl.NumberFormat().format(vat) + " VND";
+  document.getElementById("total").innerHTML =
+    new Intl.NumberFormat().format(total) + " VND";
 }
 
 function bai11Function() {
