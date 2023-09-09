@@ -65,29 +65,30 @@
         border-radius: 50%;
       }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
   </head>
   <body>
     Good
     <label class="switch">
-      <input type="checkbox" id="good" />
+      <input type="checkbox" id="good" onclick="goodClick()" />
       <span class="slider round"></span>
     </label>
     <br />
     Cheap
 
     <label class="switch">
-      <input type="checkbox" id="cheap" />
+      <input type="checkbox" id="cheap" onclick="cheapClick()"/>
       <span class="slider round"></span>
     </label>
 
     <br />
     Fast
     <label class="switch">
-      <input type="checkbox" id="fast" />
+      <input type="checkbox" id="fast" onclick="fastClick()"/>
       <span class="slider round"></span>
     </label>
-
+    <br>
+    <button type="button" onclick="check()"> Check</button>
     <script src="script.js"></script>
   </body>
 </html>
