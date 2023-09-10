@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>x:y</td>
+        <td>y:0</td>
+        <td>y:1</td>
+        <td>y:2</td>
+        <td>y:3</td>
+        <td>y:4</td>
+      </tr>
+      <tr>
+        <td>x:0</td>
+        <td colspan="5" rowspan="5"><span id="caro"></span></td>
+      </tr>
+      <tr>
+        <td>x:1</td>
+      </tr>
+      <tr>
+        <td>x:2</td>
+      </tr>
+      <tr>
+        <td>x:3</td>
+      </tr>
+      <tr>
+        <td>x:4</td>
+      </tr>
+    </table>
+    <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>x</th>
+          <th>y</th>
+          <th>Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="x1">x</label></td>
+          <td><input type="number" name="x1" id="x1" /></td>
+          <td><input type="number" name="y1" id="y1" /></td>
+          <td><button type="button" onclick="setX()">Set x</button></td>
+        </tr>
+        <tr>
+          <td><label for="x2">o</label></td>
+          <td><input type="number" name="x2" id="x2" /></td>
+          <td><input type="number" name="y2" id="y2" /></td>
+          <td><button type="button" onclick="setO()">Set o</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <button type="button" onclick="location. reload()">Reset</button>
+    <b><span id="winStatus"></span></b>
+    <br />
+    <br />
+
+    <script src="script.js"></script>
+  </body>
+</html>
