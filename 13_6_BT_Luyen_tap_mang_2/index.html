@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyện tập mảng 2</title>
+  </head>
+  <body>
+    <b>Bài 1:</b> Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có
+    sẵn, in ra các phần tử trong mảng. <br />
+    Example array: <br />
+    <span id="arrayBai1"></span> <br />
+    <button type="button" onclick="bai1Function()">Click me</button>
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <span id="resultBai1"></span> <br />
+    <hr />
+    <b>Bài 2:</b> Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo
+    ngược. Ví dụ, nếu một mảng chứa các ký tự [ 'c', 's', 'c', '2', '6', '1' ]
+    sau khi thực hiện đảo ngược sẽ là "162csc" <br />
+    <table>
+      <tr>
+        <td>Input</td>
+        <td><input type="text" name="inputBai2" id="inputBai2" /></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="bai2ToArray()">To array</button></td>
+        <td><span id="bai2ToArray"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            type="button"
+            onclick="bai2Reverse()"
+            id="bai2ReverseButton"
+            disabled
+          >
+            Reverse
+          </button>
+        </td>
+        <td><span id="bai2Reverse"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            type="button"
+            onclick="bai2ReverseQuick()"
+            id="bai2ReverseButton2"
+          >
+            Quick reverse
+          </button>
+        </td>
+        <td>
+          <button type="button" onclick="location.reload()">Reset</button>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <b>Bài 3:</b> Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    Chương trình này đếm số ký tự số trong mảng. <br />
+    <table>
+      <tr>
+        <td>Input</td>
+        <td><input type="text" name="inputBai3Text" id="inputBai3Text" /></td>
+      </tr>
+      <tr>
+        <td>Input Array Size</td>
+        <td><input type="number" name="inputBai3Size" id="inputBai3Size" /></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="bai3Function()">Đếm số</button></td>
+        <td><span id="resultBai3"></span></td>
+      </tr>
+    </table>
+    <br />
+    <button type="button" onclick="location.reload()">Reset</button>
+    <hr />
+    <b>Bài 4:</b> Viết một chương trình để đếm số từ trong một chuỗi <br />
+    <table>
+      <tr>
+        <td>Input</td>
+        <td><input type="text" name="inputBai4" id="inputBai4" /></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai4Function()">Word count</button>
+        </td>
+        <td><span id="bai4Result"></span></td>
+      </tr>
+    </table>
+    <br />
+    <button type="button" onclick="location.reload()">Reset</button>
+    <hr />
+    <b>Bài 5:</b> Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi
+    có giống nhau hay không. <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Nhập array, cách nhau bởi dấu ','</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Input Array A</td>
+          <td><input type="text" name="inputBai5A" id="inputBai5A" /></td>
+        </tr>
+        <tr>
+          <td>Input Array B</td>
+          <td><input type="text" name="inputBai5B" id="inputBai5B" /></td>
+        </tr>
+        <tr>
+          <td><button type="button" onclick="bai5Function()">Check</button></td>
+          <td><span id="resultBai5"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <button type="button" onclick="location.reload()">Reset</button>
+    <hr />
+    <b>Bài 6:</b> Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong
+    mảng là (-) và thay thế các ký tự này bởi ký tự ( _ ) <br />
+
+    <table>
+      <tr>
+        <td>String</td>
+        <td><input type="text" name="inputBai6" id="inputBai6" /></td>
+      </tr>
+      <tr>
+        <td>Find</td>
+        <td>
+          <input type="text" name="findBai6" id="findBai6" maxlength="1" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai6Function()">Replace with</button>
+        </td>
+        <td>
+          <input
+            type="text"
+            name="replaceBai6"
+            id="replaceBai6"
+            maxlength="1"
+          />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <button type="button" onclick="location.reload()">Reset</button>
+    <hr />
+
+    <script src="script.js"></script>
+  </body>
+</html>
