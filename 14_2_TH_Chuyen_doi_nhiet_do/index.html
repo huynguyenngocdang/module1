@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2"> Temperature Converter</th>
+            </tr>
+            <tr>
+                <th colspan="2"> Type a value in field to convert temperature</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fahrenheit</td>
+                <td><input type="number" name="inputFahrenheit" id="inputFahrenheit" 
+                    oninput="temperatureConverterToC(this.value)"
+                    onchange="temperatureConverterToC(this.value)"></td>
+            </tr>
+            <tr>
+                <td>Celcius</td>
+                <td><input type="number" name="inputCelcius" id="inputCelcius" 
+                    oninput="temperatureConverterToF(this.value)"
+                    onchange="temperatureConverterToF(this.value)"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
