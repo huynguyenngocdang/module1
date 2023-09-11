@@ -20,9 +20,5 @@ function primeList() {
     }
   }
 
-  while (countSNT < countMax) {
-    
-  }
-
   document.getElementById("result").innerHTML = text;
 }
