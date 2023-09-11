@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyen tap mang 1</title>
+  </head>
+  <body>
+    Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương
+    trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc
+    bằng 10. <br />
+
+    <table>
+      <tr>
+        <td><label for="bai1Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai1Min" id="bai1Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai1Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai1Max" id="bai1Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai1Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai1Amount" id="bai1Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai1GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai1Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai1Larger10()">
+            Số lớn hơn/bằng 10
+          </button>
+        </td>
+        <td><span id="printBai1Larger10"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button>
+
+    <hr />
+    Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị
+    trí của phần tử đó. <br />
+
+    <table>
+      <tr>
+        <td><label for="bai2Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai2Min" id="bai2Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai2Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai2Max" id="bai2Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai2Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai2Amount" id="bai2Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai2GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai2Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai2Largest()">
+            Giá trị lớn nhất
+          </button>
+        </td>
+        <td><span id="bai2LargestResult"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+
+    <hr />
+    Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất
+    trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng. <br />
+
+    <table>
+      <tr>
+        <td><label for="bai3Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai3Min" id="bai3Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai3Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai3Max" id="bai3Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai3Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai3Amount" id="bai3Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai3GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai3Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai3Largest()">
+            Giá trị lớn nhất
+          </button>
+        </td>
+        <td><span id="bai3LargestResult"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <hr />
+    Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược
+    các phần tử trong mảng đó. <br />
+    <table>
+      <tr>
+        <td><label for="bai4Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai4Min" id="bai4Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai4Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai4Max" id="bai4Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai4Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai4Amount" id="bai4Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai4GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai4Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai4Revert()">Đảo ngược</button>
+        </td>
+        <td><span id="bai4Revert"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+
+    <hr />
+    Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi <br />
+
+    <table>
+      <tr>
+        <td><label for="bai5Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai5Min" id="bai5Min" value="-10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai5Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai5Max" id="bai5Max" value="-1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai5Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai5Amount" id="bai5Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai5GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai5Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai5CountNegNum()">Đếm số âm</button>
+        </td>
+        <td><span id="bai5Result"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <hr />
+    Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần
+    tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng
+    số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array"
+    còn lại in ra "V is not in the array". <br />
+    <table>
+      <tr>
+        <td><label for="bai6Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai6Min" id="bai6Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai6Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai6Max" id="bai6Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai6Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai6Amount" id="bai6Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai6GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai6Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            type="button"
+            onclick="bai6Check()"
+            id="bai6CheckButton"
+            disabled
+          >
+            Kiểm tra phần tử V
+          </button>
+        </td>
+        <td>
+          <input type="number" name="bai6check" id="bai6CheckInput" disabled />
+        </td>
+      </tr>
+      <tr>
+        <td>Result:</td>
+        <td><span id="bai6Result"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <hr />
+    Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần
+    tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng
+    đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở
+    đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử
+    cuối cùng của mảng) <br />
+
+    <table>
+      <tr>
+        <td><label for="bai7Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai7Min" id="bai7Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai7Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai7Max" id="bai7Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai7Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai7Amount" id="bai7Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai7GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai7Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            type="button"
+            onclick="bai7Check()"
+            id="bai7CheckButton"
+            disabled
+          >
+            Kiểm tra/xóa phần tử V
+          </button>
+        </td>
+        <td>
+          <input type="number" name="bai7check" id="bai7CheckInput" disabled />
+        </td>
+      </tr>
+      <tr>
+        <td>Result:</td>
+        <td><span id="bai7Result"></span></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <hr />
+    Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần
+    tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã
+    được sắp xếp. <br />
+
+    <table>
+      <tr>
+        <td><label for="bai8Min">Giá trị nhỏ nhất: </label></td>
+        <td><input type="number" name="bai8Min" id="bai8Min" value="1" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai8Max">Giá trị lớn nhất: </label></td>
+        <td><input type="number" name="bai8Max" id="bai8Max" value="10" /></td>
+      </tr>
+      <tr>
+        <td><label for="bai8Amount">Số lượng giá trị:</label></td>
+        <td>
+          <input type="number" name="bai8Amount" id="bai8Amount" value="10" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai8GetArray()">Lấy Array</button>
+        </td>
+        <td><span id="printBai8Array"></span></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai8Desc()" id="bai8Desc" disabled>
+            Sắp xếp giảm dần
+          </button>
+        </td>
+        <td>
+          <button type="button" onclick="bai8Asc()" id="bai8Asc" disabled>
+            Sắp xếp tăng dần
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <hr />
+    Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử,
+    gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số
+    nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng
+    c. Hiển thị mảng c. <br />
+
+    <table>
+      <thead>
+        <tr>
+            <th colspan="2">Array A</th>
+            <th colspan="2">Array B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="bai9MinA">Giá trị nhỏ nhất: </label></td>
+          <td><input type="number" name="bai9MinA" id="bai9MinA" value="1" /></td>
+          <td><label for="bai9MinB">Giá trị nhỏ nhất: </label></td>
+          <td><input type="number" name="bai9MinB" id="bai9MinB" value="1" /></td>
+        </tr>
+        <tr>
+          <td><label for="bai9MaxA">Giá trị lớn nhất: </label></td>
+          <td>
+            <input type="number" name="bai9MaxA" id="bai9MaxA" value="10" />
+          </td>
+          <td><label for="bai9MaxB">Giá trị lớn nhất: </label></td>
+          <td>
+            <input type="number" name="bai9MaxB" id="bai9MaxB" value="10" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="bai9AmountA">Số lượng giá trị:</label></td>
+          <td>
+            <input type="number" name="bai9AmountA" id="bai9AmountA" value="10" />
+          </td>
+          <td><label for="bai9AmountB">Số lượng giá trị:</label></td>
+          <td>
+            <input type="number" name="bai9AmountB" id="bai9AmountB" value="10" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" onclick="bai9GetArrayA()">Lấy Array A</button>
+          </td>
+          <td><span id="printBai9ArrayA"></span></td>
+          <td>
+            <button type="button" onclick="bai9GetArrayB()">Lấy Array B</button>
+          </td>
+          <td><span id="printBai9ArrayB"></span></td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" onclick="bai9GetArrayC()" id="bai9GetArrayCButton" disabled>Lấy Array C</button>
+          </td>
+          <td colspan="3">
+            <span id="printBai9ArrayC"></span>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <button type="button" onclick="location.reload()">Reset</button> <br />
+    <script src="script.js"></script>
+  </body>
+</html>
