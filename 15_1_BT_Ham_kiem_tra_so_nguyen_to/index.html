@@ -6,8 +6,13 @@
     <title>Document</title>
   </head>
   <body>
+    <label for="inputCheck">Prime Number Check </label>
+    <input type="number" name="inputCheck" id="inputCheck" min="1" max="10000" />
+    <button type="button" onclick="primeResult()">Check</button> <br />
+    <span id="resultPrime"></span> <br>
+    <hr>
     <label for="inputCount">Prime Number Count </label>
-    <input type="number" name="inputCount" id="inputCount" />
+    <input type="number" name="inputCount" id="inputCount" min="1" max="10000"/>
     <button type="button" onclick="primeList()">Get prime number</button> <br />
     <span id="result"></span>
     <script src="script.js"></script>
