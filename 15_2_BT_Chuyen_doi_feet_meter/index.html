@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2"> Feet-meter Converter</th>
+            </tr>
+            <tr>
+                <th colspan="2"> Type a value in field to convert feet-meter</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Feet</td>
+                <td><input type="number" name="inputFeet" id="inputFeet" 
+                    oninput="temperatureConverterToM(this.value)"
+                    onchange="temperatureConverterToM(this.value)"></td>
+            </tr>
+            <tr>
+                <td>Meter</td>
+                <td><input type="number" name="inputMeter" id="inputMeter" 
+                    oninput="temperatureConverterToF(this.value)"
+                    onchange="temperatureConverterToF(this.value)"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
