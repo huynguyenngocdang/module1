@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        width: 25%;
+        overflow: hidden;
+      }
+
+    </style>
+  </head>
+  <body onload="randomImage()">
+    <img src="image/1_1.png" alt="" id="object1" onclick="changeImg(this.src, this.id)"/>
+
+    <img src="image/1_2.png" alt="" id="object2" onclick="changeImg(this.src, this.id)"/>
+
+    <img src="image/1_3.png" alt="" id="object3" onclick="changeImg(this.src, this.id)"/>
+
+    <button type="button" onclick="check()">Check</button>
+
+<script src="script.js"></script>
+  </body>
+</html>
