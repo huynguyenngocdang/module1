@@ -40,6 +40,7 @@
         <td><input type="number" name="inputBai2DienTich" id="inputBai2DienTich" oninput="bai2Function(this.value, this.id)" onchange="bai2Function(this.value, this.id)"></td>
       </tr>
     </table>
+    <button type="button" onclick="location.reload()">Reset</button>
     <hr />
 
     Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi
@@ -54,32 +55,119 @@
         <td><span id="resultBai3"></span></td>
       </tr>
     </table>
+    <button type="button" onclick="location.reload()">Reset</button>
     <hr />
 
     Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu
     là ký tự số hàm trả về true, ngược lại trả về false.<br />
+
+    <table>
+      <tr>
+        <td>Input</td>
+        <td><input type="text" name="inputBai4" id="inputBai4" oninput="bai4Function(this.value)" onchange="bai4Function(this.value)" maxlength="1"></td>
+      </tr>
+      <tr>
+        <td>Is numeric?</td>
+        <td><span id="resultBai4"></span></td>
+      </tr>
+    </table>
+    <button type="button" onclick="location.reload()">Reset</button>
     <hr />
 
     Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ
     nhất.<br />
+
+    <table>
+      <tr>
+        <td>A</td>
+        <td><input type="number" name="inputBai5A" id="inputBai5A" oninput="bai5Function()" onchange="bai5Function()"></td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td><input type="number" name="inputBai5B" id="inputBai5B"  oninput="bai5Function()" onchange="bai5Function()"></td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td><input type="number" name="inputBai5C" id="inputBai5C"  oninput="bai5Function()" onchange="bai5Function()"></td>
+      </tr>
+      <tr>
+        <td>Result</td>
+        <td><span id="resultBai5"></span></td>
+      </tr>
+    </table>
+    <button type="button" onclick="location.reload()">Reset</button>
     <hr />
 
     Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là
     nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về
     false.<br />
+
+    <table>
+      <tr>
+        <td>Input</td>
+        <td><input type="text" name="inputBai6" id="inputBai6" oninput="bai6Function(this.value)" onchange="bai6Function(this.value)"></td>
+      </tr>
+      <tr>
+        <td>Result</td>
+        <td><span id="resultBai6"></span></td>
+      </tr>
+    </table>
+    <button type="button" onclick="location.reload()">Reset</button>
     <hr />
 
     Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số
     nguyên đó.<br />
+
+    <table>
+      <tr>
+        <td>Input A</td>
+        <td><input type="number" name="inputBai7A" id="inputBai7A"></td>
+      </tr>
+      <tr>
+        <td>Input B</td>
+        <td><input type="number" name="inputBai7B" id="inputBai7B"></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="bai7Function()">Change Position</button></td>
+        <td><button type="button" onclick="location.reload()">Reset</button></td>
+      </tr>
+    </table>
     <hr />
 
     Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số
     nguyên đó.<br />
+    <table>
+      <tr>
+        <td>Input Array</td>
+        <td><input type="text" name="inputBai8" id="inputBai8"></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="bai8Function()">Reverse</button></td>
+        <td><button type="button" onclick="location.reload()">Reset</button></td>
+      </tr>
+    </table>
+
     <hr />
 
     Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem
     ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của
     ký tự đó, nếu không trả về -1. <br />
+
+    <table>
+      <tr>
+        <td>Input Array</td>
+        <td><input type="text" name="inputBai9Array" id="inputBai9Array"></td>
+      </tr>
+      <tr>
+        <td>Input search</td>
+        <td><input type="text" name="inputBai9Char" id="inputBai9Char" maxlength="1"></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="bai9Function()">Search</button></td>
+        <td><span id="resultBai9"></span></td>
+      </tr>
+    </table>
+    <button type="button" onclick="location.reload()">Reset</button>
     <hr />
 
     <script src="script.js"></script>
