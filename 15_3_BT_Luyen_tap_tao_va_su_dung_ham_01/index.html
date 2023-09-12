@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi "Xin chao". Gọi
+    hàm từ trong phần &lt;body&gt; của trang web. <br />
+
+    <table>
+      <tr>
+        <td>Input</td>
+        <td>
+          <input type="text" name="bai1Input" id="bai1Input" value="Xin chao" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai1Function()">
+            Alert for Input
+          </button>
+        </td>
+        <td>
+          <button type="button" onclick="alert('Xin chao')">
+            Alert Xin chao
+          </button>
+        </td>
+      </tr>
+    </table>
+    <hr />
+
+    Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và
+    trả lại giá trị cho lời gọi hàm. Gọi hàm từ trong phần &lt;body&gt; của
+    trang web và hiển thị kết quả lên màn hình. <br />
+
+    <table>
+      <tr>
+        <td>Input</td>
+        <td><input type="number" name="bai2Input" id="bai2Input" /></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai2Function()">Increase</button>
+        </td>
+        <td>
+          <button type="button" onclick="location.reload()">Reset</button>
+        </td>
+      </tr>
+    </table>
+    <hr />
+
+    Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn
+    hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá
+    trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của
+    hai tham số. <br />
+    <table>
+      <tr>
+        <td>Tham số A</td>
+        <td><input type="text" name="inputBai3A" id="inputBai3A" /></td>
+      </tr>
+      <tr>
+        <td>Tham số B</td>
+        <td><input type="text" name="inputBai3B" id="inputBai3B" /></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="bai3Function()">Check</button></td>
+        <td>
+          <button type="button" onclick="location.reload()">Reset</button>
+        </td>
+      </tr>
+    </table>
+
+    <hr />
+
+    Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để
+    bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm.
+    <br />
+
+    <table>
+      <tr>
+        <td>function addNumbers() &lcub;</td>
+        <td>
+          <button type="button" onclick="alert('result = 0')">Alert</button>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: end">firstNum =</td>
+        <td><input type="number" name="bai4FirstNum" id="bai4FirstNum" />;</td>
+      </tr>
+      <tr>
+        <td style="text-align: end">secondNum =</td>
+        <td>
+          <input type="number" name="bai4SecondNum" id="bai4SecondNum" />;
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: end">result = firstNum + secondNum;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>return result;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&rcub;</td>
+        <td><button type="button" onclick="alertSecond()">Alert</button></td>
+      </tr>
+    </table>
+    <hr />
+    Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi
+    sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một
+    mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương
+    ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major
+    và Leo. Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất.
+    Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy,
+    trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả
+    lại tên chòm sao của ngôi sao đó. Trong phần &lt;body&gt; của trang web,
+    dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi
+    hàm với thông tin đầu vào. Đừng quên xử lý trong trường hợp không tìm thấy
+    ngôi sao nào. Cho kết quả hiển thị trên màn hình. <br />
+
+    <table>
+      <tr>
+        <th>Chòm sao</th>
+        <th>Sao</th>
+      </tr>
+      <tr>
+        <td>Ursa Minor</td>
+        <td>Polaris</td>
+      </tr>
+      <tr>
+        <td>Tarurus</td>
+        <td>Aldebaran</td>
+      </tr>
+      <tr>
+        <td>Cygnus</td>
+        <td>Deneb</td>
+      </tr>
+      <tr>
+        <td>Lyra</td>
+        <td>Vega</td>
+      </tr>
+      <tr>
+        <td>Aquila</td>
+        <td>Altair</td>
+      </tr>
+      <tr>
+        <td>Ursa Major</td>
+        <td>Dubhe</td>
+      </tr>
+      <tr>
+        <td>Leo</td>
+        <td>Regulus</td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="bai5Function()">
+            Tìm sao/chòm sao
+          </button>
+        </td>
+        <td><input type="text" name="findStar" id="findStar" /></td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
