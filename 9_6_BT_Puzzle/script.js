@@ -81,7 +81,7 @@ function check() {
   // ) {
   //   alert("You are correct");
   // }
-
+  
   if (pos1Check == pos2Check && pos2Check == pos3Check) {
     alert("You are correct");
   }
