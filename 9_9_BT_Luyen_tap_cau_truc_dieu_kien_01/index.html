@@ -114,44 +114,65 @@
     <hr />
     Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
     <br />
-    <p>
-      Theo khoản 4.1 phụ lục ban hành kèm theo Quyết định 648/QĐ_BCT ngày
-      20/3/2019 về điều chỉnh mức giá bán lẻ điện bình quân và quy định giá bán
-      điện, giá bán lẻ điện sinh hoạt sẽ được tính theo 6 bậc như sau (cập nhật 7/9/2023):
-      <a href="https://www.evn.com.vn/c3/calc/Cong-cu-tinh-hoa-don-tien-dien-9-172.aspx" target="_blank">trang tính EVN</a>
-      <ul>
-        <li>Bậc 1 (0 đến 50kWh): 1.728 đồng/kWh</li>
-        <li>Bậc 2 (51 đến 100kWh): 1.786 đồng/kWh</li>
-        <li>Bậc 3 (101 đến 200 kWh): 2.074 đồng/kWh</li>
-        <li>Bậc 4 (201 đến 300 kWh): 2.612 đồng/kWh</li>
-        <li>Bậc 5 (301 đến 400 kWh): 2.919 đồng/kWh</li>
-        <li>Bậc 6 (401 kWh trở lên): 3.015 đồng/kWh</li>
-      </ul>
-    </p>
-    <label for="dienTieuThu">Điện tiêu thụ(đơn vị kWh): </label>
-    <input type="number" name="dienTieuThu" id="dienTieuThu" />
-    <button type="button" onclick="functionBai7()">Check</button> <br />
-    Kết quả:
+    <h3>
+      Bảng giá cước điện thoại các nhà mạng: Viettel- VinaPhone- MobiPhone
+    </h3>
     <table>
-        <tr>
-            <td><span id="mucDien"></span></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tổng chưa thuế:</td>
-            <td><span id="resultBai7"></span></td>
-        </tr>
-        <tr>
-            <td>Thuế suất (8%):</td>
-            <td><span id="vat"></span></td>
-        </tr>
-        <tr>
-            <td>Tổng cộng :</td>
-            <td><span id="total"></span></td>
-        </tr>
+      <tr>
+        <td></td>
+        <td>Viettel</td>
+        <td>VinaPhone</td>
+        <td>MobiPhone</td>
+      </tr>
+      <tr>
+        <td>SMS</td>
+        <td><input type="number" name="smsViet" id="smsViet" value="260" /></td>
+        <td><input type="number" name="smsVina" id="smsVina" value="270" /></td>
+        <td><input type="number" name="smsMobi" id="smsMobi" value="250" /></td>
+      </tr>
+      <tr>
+        <td>Gọi thoại</td>
+        <td>
+          <input type="number" name="thoaiViet" id="thoaiViet" value="1790" />
+        </td>
+        <td><input type="number" name="thoaiVina" id="thoaiVina" value="1780" /></td>
+        <td><input type="number" name="thoaiMobi" id="thoaiMobi" value="1780" /></td>
+      </tr>
     </table>
-     <br />
-
+    <table>
+      <tr>
+        Chọn mạng điện thoại sử dụng:
+      </tr>
+      <br />
+      <tr>
+        <select name="net" id="idNet">
+          <option value="viettel">Viettel</option>
+          <option value="vinaPhone">VinaPhone</option>
+          <option value="mobiPhone">MobiPhone</option>
+        </select>
+      </tr>
+      <br />
+      <tr>
+        <td>Số lượng sms</td>
+        <td><input type="number" name="smsAmount" id="smsAmount"></td>
+      </tr>
+      <tr>
+        <td>Thời lượng call</td>
+        <td><input type="number" name="thoaiAmount" id="thoaiAmount"></td>
+      </tr>
+      <tr>
+        <td>
+        <button type="button" onclick="functionBai7()">Check</button>
+        </td>
+        <td><span id="resultBai7"></span></td>
+        
+        
+        Result:
+        
+      </tr>
+    </table>
+    <br>
+    <button onclick="reset()">Reset</button> <br>
     <script src="script.js"></script>
   </body>
 </html>

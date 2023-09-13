@@ -147,67 +147,38 @@ function functionBai6() {
 }
 
 function functionBai7() {
-  let mucDien1 = 1728;
-  let mucDien2 = 1786;
-  let mucDien3 = 2074;
-  let mucDien4 = 2612;
-  let mucDien5 = 2919;
-  let mucDien6 = 3015;
-  let dienTieuThu = document.getElementById("dienTieuThu").value;
-  let tienDien;
-  let vat;
-  let total;
+  let loaiMang = document.getElementById("idNet").value;
+  let smsAmount = document.getElementById("smsAmount").value;
+  let thoaiAmount = document.getElementById("thoaiAmount").value;
+  let smsRate = 0;
+  let thoaiRate = 0;
+  let smsType = "";
+  let thoaiType = "";
+  let totalAmount = 0;
+  let totalAmountFormatted;
 
-  if (dienTieuThu <= 50) {
-    tienDien = dienTieuThu * mucDien1;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
-    document.getElementById("mucDien").innerHTML = "Mức 0: ";
-  } else if (dienTieuThu <= 100) {
-    tienDien = (dienTieuThu - 50) * mucDien2 + mucDien1 * 50;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
-    document.getElementById("mucDien").innerHTML = "Mức 2: ";
-  } else if (dienTieuThu <= 200) {
-    tienDien = (dienTieuThu - 100) * mucDien3 + mucDien1 * 50 + mucDien2 * 50;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
-    document.getElementById("mucDien").innerHTML = "Mức 3: ";
-  } else if (dienTieuThu <= 300) {
-    tienDien =
-      (dienTieuThu - 200) * mucDien4 +
-      mucDien1 * 50 +
-      mucDien2 * 50 +
-      mucDien3 * 100;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
-    document.getElementById("mucDien").innerHTML = "Mức 4: ";
-  } else if (dienTieuThu <= 400) {
-    tienDien =
-      (dienTieuThu - 300) * mucDien5 +
-      mucDien1 * 50 +
-      mucDien2 * 50 +
-      mucDien3 * 100 +
-      mucDien4 * 100;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
-    document.getElementById("mucDien").innerHTML = "Mức 5: ";
-  } else {
-    tienDien =
-      (dienTieuThu - 400) * mucDien6 +
-      mucDien1 * 50 +
-      mucDien2 * 50 +
-      mucDien3 * 100 +
-      mucDien4 * 100 +
-      mucDien5 * 100;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
-    document.getElementById("mucDien").innerHTML = "Mức 6: ";
+  switch (loaiMang) {
+    case "viettel":
+      smsType = "smsViet";
+      thoaiType = "thoaiViet";
+      break;
+    case "vinaPhone":
+      smsType = "smsVina";
+      thoaiType = "thoaiVina";
+      break;
+    case "mobiPhone":
+      smsType = "smsMobi";
+      thoaiType = "thoaiMobi";
+      break;
+
+    default:
+      alert("Loại mạng invalid");
+      break;
   }
-  document.getElementById("resultBai7").innerHTML =
-    new Intl.NumberFormat().format(tienDien) + " VND";
-  document.getElementById("vat").innerHTML =
-    new Intl.NumberFormat().format(vat) + " VND";
-  document.getElementById("total").innerHTML =
-    new Intl.NumberFormat().format(total) + " VND";
+  smsRate = document.getElementById(smsType).value;
+  thoaiRate = document.getElementById(thoaiType).value;
+
+  totalAmount = smsRate * smsAmount + thoaiRate * thoaiAmount;
+  totalAmountFormatted = new Intl.NumberFormat().format(totalAmount);
+  document.getElementById("resultBai7").innerHTML = totalAmountFormatted;
 }
