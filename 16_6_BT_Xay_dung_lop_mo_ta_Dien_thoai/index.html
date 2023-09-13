@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+        <thead>
+          <tr >
+            <td>Mobile <span id="phoneAId" value="A"> A</span></td>
+            <td>Số lượng pin <span id="phoneAPin"></span></td>
+            <td><input type="text" name="phoneAPinCount" id="phoneAPinCount" disabled style="width: 35px;"></span></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked id = "statusA" onclick="statusCheck('A')"/>
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>Status: <span id="statusADisplay"></span></td>
+            <td><button type="button" id="rechargeA" onclick="recharge('A')">Sạc</button></td>
+          </tr>
+
+          <tr>
+              <td>Gửi cho</td>
+              <td><Select id="phoneASentTo">
+                  <Option selected value="B">Mobile B</Option>
+                  <Option value="C">Mobile C</Option>
+              </Select></td>
+              <td></td>
+          </tr>
+          <tr>
+            <td>Tin nhắn lưu tạm</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Soạn tin nhắn</td>
+            <td><input type="text" name="messageA" id="messageA" /></td>
+            <td><button type="button" onclick="guiTinNhan('A')" id="btnMessageA">Gửi tin</button></td>
+          </tr>
+          <tr>
+            <td>Tin nhắn đã gửi</td>
+            <td><span id="phoneATinNhanDaGui"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Hộp thư đến</td>
+            <td><span id="phoneATinNhanDaNhan"></span></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    <br> <br> <br>
+    <table>
+        <thead>
+          <tr>
+            <td>Mobile <span id="phoneBId" value="B"> B</span></td>
+            <td>Số lượng pin <span id="phoneBPin"></span></td>
+            <td><input type="text" name="phoneBPinCount" id="phoneBPinCount" disabled style="width: 35px;"></span></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label class="switch">
+                <input type="checkbox" checked id = "statusB" onclick="statusCheck('B')"/>
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>Status <span id="statusBDisplay"></span></td>
+            <td><button type="button" id="rechargeB" onclick="recharge('B')">Sạc</button></td>
+          </tr>
+
+          <tr>
+              <td>Gửi cho</td>
+              <td><Select id="phoneBSentTo">
+                  <Option selected value="A">Mobile A</Option>
+                  <Option value="C">Mobile C</Option>
+              </Select></td>
+              <td></td>
+          </tr>
+          <tr>
+            <td>Tin nhắn lưu tạm</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Soạn tin nhắn</td>
+            <td><input type="text" name="messageB" id="messageB" /></td>
+            <td><button type="button" onclick="guiTinNhan('B')" id="btnMessageB">Gửi tin</button></td>
+          </tr>
+          <tr>
+            <td>Tin nhắn đã gửi</td>
+            <td><span id="phoneBTinNhanDaGui"></span></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Hộp thư đến</td>
+            <td><span id="phoneBTinNhanDaNhan"></span></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" onclick="location.reload()">Reset</button>
+    <script src="script.js"></script>
+  </body>
+</html>
