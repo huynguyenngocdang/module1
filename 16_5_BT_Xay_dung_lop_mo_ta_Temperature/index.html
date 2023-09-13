@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Temperature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Temp C</td>
+            <td><input type="text" name="tempC" id="tempC" oninput="calculateTemp(this.value, 'C')" onchange="calculateTemp(this.value, 'C')"></td>
+        </tr>
+        <tr>
+            <td>Temp F</td>
+            <td><input type="text" name="tempF" id="tempF" oninput="calculateTemp(this.value, 'F')" onchange="calculateTemp(this.value, 'F')"></td>
+        </tr>
+        <tr>
+            <td>Temp K</td>
+            <td><input type="text" name="tempK" id="tempK" oninput="calculateTemp(this.value, 'K')" onchange="calculateTemp(this.value, 'K')"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" onclick="location.reload()">Reset</button>
+    <script src="script.js"></script>
+  </body>
+</html>
