@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .alnright { text-align: right; }
+      .alnright {
+        text-align: right;
+      }
     </style>
   </head>
   <body>
@@ -22,6 +24,30 @@
         </td>
         <td><label for="doF">Độ F</label></td>
         <td><input type="number" name="doF" id="doF" /></td>
+      </tr>
+      <tr>
+        <td>Celcius</td>
+        <td>
+          <input
+            type="number"
+            name="inputCelcius"
+            id="inputCelcius"
+            oninput="temperatureConverterToF(this.value)"
+            onchange="temperatureConverterToF(this.value)"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Fahrenheit</td>
+        <td>
+          <input
+            type="number"
+            name="inputFahrenheit"
+            id="inputFahrenheit"
+            oninput="temperatureConverterToC(this.value)"
+            onchange="temperatureConverterToC(this.value)"
+          />
+        </td>
       </tr>
     </table>
     <br />
@@ -41,6 +67,18 @@
         <td><label for="feet">Feet</label></td>
         <td><input type="number" name="feet" id="feet" /></td>
       </tr>
+      <tr>
+        <td>Meter</td>
+        <td><input type="number" name="inputMeter" id="inputMeter" 
+          oninput="temperatureConverterToF(this.value)"
+          onchange="temperatureConverterToF(this.value)"></td>
+        </tr>
+        <tr>
+      <td>Feet</td>
+      <td><input type="number" name="inputFeet" id="inputFeet" 
+          oninput="temperatureConverterToM(this.value)"
+          onchange="temperatureConverterToM(this.value)"></td>
+    </tr>
     </table>
     <hr />
     Bài 3: Tính diện tích hình vuông khi biết cạnh a. <br />
@@ -158,8 +196,12 @@
     Theo khoản 4.1 phụ lục ban hành kèm theo Quyết định 648/QĐ_BCT ngày
     20/3/2019 về điều chỉnh mức giá bán lẻ điện bình quân và quy định giá bán
     điện, giá bán lẻ điện sinh hoạt sẽ được tính theo 6 bậc như sau (cập nhật
-    7/9/2023): <br>
-    <a href="https://www.evn.com.vn/c3/calc/Cong-cu-tinh-hoa-don-tien-dien-9-172.aspx" target="_blank">trang tính EVN</a>
+    7/9/2023): <br />
+    <a
+      href="https://www.evn.com.vn/c3/calc/Cong-cu-tinh-hoa-don-tien-dien-9-172.aspx"
+      target="_blank"
+      >trang tính EVN</a
+    >
     <ul>
       <li>Bậc 1 (0 đến 50kWh): 1.728 đồng/kWh</li>
       <li>Bậc 2 (51 đến 100kWh): 1.786 đồng/kWh</li>

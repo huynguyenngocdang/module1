@@ -231,7 +231,7 @@ function statusCheck(id) {
                 document.getElementById("btnMessageA").disabled = false;
             } else {
                 document.getElementById("statusADisplay").innerHTML = "OFF";
-                
+                document.getElementById("statusA").checked = false;
                 document.getElementById("btnMessageA").disabled = true;
             }
             break;
@@ -245,7 +245,7 @@ function statusCheck(id) {
                     document.getElementById("btnMessageB").disabled = false;
                 } else {
                     document.getElementById("statusBDisplay").innerHTML = "OFF";
-                    
+                    document.getElementById("statusB").checked = false; 
                     document.getElementById("btnMessageB").disabled = true;
                 }
                 break;

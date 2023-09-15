@@ -1,5 +1,16 @@
 const feetConversion = 3.2808;
 
+function temperatureConverterToC(valueTemp) {
+  inputTemp = parseFloat(valueTemp);
+  document.getElementById("inputCelcius").value = ((inputTemp-32) / 1.8).toFixed(2);
+}
+
+function temperatureConverterToF(valueTemp) {
+  inputTemp = parseFloat(valueTemp);
+  document.getElementById("inputFahrenheit").value = (inputTemp * 1.8 + 32).toFixed(2);
+}
+
+
 function chuyenF() {
   let c = document.getElementById("doC").value;
   let f = (c * 9) / 5 + 32;
@@ -10,6 +21,19 @@ function chuyenC() {
   let f = document.getElementById("doF").value;
   let c = ((f - 32) * 5) / 9;
   document.getElementById("doC").value = new Intl.NumberFormat().format(c);
+}
+
+const feet_conversion = 0.305;
+const meter_conversion = 3.279;
+
+function temperatureConverterToM(valueInput) {
+    let inputValue = parseFloat(valueInput);
+    document.getElementById("inputMeter").value = (inputValue*feet_conversion).toFixed(3);
+}
+
+function temperatureConverterToF(valueInput) {
+    let inputValue = parseFloat(valueInput);
+    document.getElementById("inputFeet").value = (inputValue*meter_conversion).toFixed(3);
 }
 
 function chuyenFeet() {
@@ -139,18 +163,15 @@ function bai10Function() {
 
   if (dienTieuThu <= 50) {
     tienDien = dienTieuThu * mucDien1;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
+
     document.getElementById("mucDien").innerHTML = "Mức 0: ";
   } else if (dienTieuThu <= 100) {
     tienDien = (dienTieuThu - 50) * mucDien2 + mucDien1 * 50;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
+
     document.getElementById("mucDien").innerHTML = "Mức 2: ";
   } else if (dienTieuThu <= 200) {
     tienDien = (dienTieuThu - 100) * mucDien3 + mucDien1 * 50 + mucDien2 * 50;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
+
     document.getElementById("mucDien").innerHTML = "Mức 3: ";
   } else if (dienTieuThu <= 300) {
     tienDien =
@@ -158,8 +179,7 @@ function bai10Function() {
       mucDien1 * 50 +
       mucDien2 * 50 +
       mucDien3 * 100;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
+
     document.getElementById("mucDien").innerHTML = "Mức 4: ";
   } else if (dienTieuThu <= 400) {
     tienDien =
@@ -168,8 +188,7 @@ function bai10Function() {
       mucDien2 * 50 +
       mucDien3 * 100 +
       mucDien4 * 100;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
+
     document.getElementById("mucDien").innerHTML = "Mức 5: ";
   } else {
     tienDien =
@@ -179,10 +198,11 @@ function bai10Function() {
       mucDien3 * 100 +
       mucDien4 * 100 +
       mucDien5 * 100;
-    vat = (tienDien * 8) / 100;
-    total = tienDien + vat;
+
     document.getElementById("mucDien").innerHTML = "Mức 6: ";
   }
+  vat = (tienDien * 8) / 100;
+  total = tienDien + vat;
   document.getElementById("resultBai10").innerHTML =
     new Intl.NumberFormat().format(tienDien) + " VND";
   document.getElementById("vat").innerHTML =

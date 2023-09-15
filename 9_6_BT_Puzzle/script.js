@@ -18,6 +18,7 @@ function randomImage() {
   img1.src = array1[parseInt(getRandomInt(0, 2)).toFixed(0)];
   img2.src = array2[parseInt(getRandomInt(0, 2)).toFixed(0)];
   img3.src = array3[parseInt(getRandomInt(0, 2)).toFixed(0)];
+  check();
 }
 
 //change image on click
@@ -81,8 +82,12 @@ function check() {
   // ) {
   //   alert("You are correct");
   // }
-  
+
   if (pos1Check == pos2Check && pos2Check == pos3Check) {
-    alert("You are correct");
+    $("img").css("box-shadow", "4px 4px 9px red");
+    // document.getElementById('img').style.boxShadow = "4px 4px 9px red";
+  } else {
+    $("img").css("box-shadow", "2px 3px 3px black");
+    // document.getElementById('img').style.boxShadow = "2px 3px 3px black";
   }
 }

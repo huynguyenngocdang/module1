@@ -41,31 +41,54 @@
 
 //   });
 
-function goodClick() {
-  let statusGood = document.getElementById("good").checked;
-  let statusCheap = document.getElementById("cheap").checked;
-  let statusFast = document.getElementById("fast").checked;
-  if (statusCheap == true && statusFast == true) {
-    document.getElementById("cheap").checked = false;
+// function goodClick() {
+//   let statusGood = document.getElementById("good").checked;
+//   let statusCheap = document.getElementById("cheap").checked;
+//   let statusFast = document.getElementById("fast").checked;
+//   if (statusCheap == true && statusFast == true) {
+//     document.getElementById("cheap").checked = false;
+//   }
+// }
+
+// function cheapClick() {
+//   let statusGood = document.getElementById("good").checked;
+//   let statusCheap = document.getElementById("cheap").checked;
+//   let statusFast = document.getElementById("fast").checked;
+//   if (statusGood == true && statusFast == true) {
+//     document.getElementById("fast").checked = false;
+//   }
+// }
+
+// function fastClick() {
+//   let statusGood = document.getElementById("good").checked;
+//   let statusCheap = document.getElementById("cheap").checked;
+//   let statusFast = document.getElementById("fast").checked;
+//   if (statusGood == true && statusCheap == true) {
+//     document.getElementById("good").checked = false;
+//   }
+// }
+
+let statusGood = document.getElementById("good");
+let statusCheap = document.getElementById("cheap");
+let statusFast = document.getElementById("fast");
+
+function thisClick(id) {
+  switch (id) {
+    case "good":
+      if (statusCheap.checked && statusFast.checked) {
+        statusCheap.checked = false;
+      }
+      break;
+
+    case "cheap":
+      if (statusGood.checked && statusFast.checked) {
+        statusFast.checked = false;
+      }
+      break;
+    case "fast":
+      if (statusGood.checked && statusCheap.checked) {
+        statusGood.checked = false;
+      }
+      break;
   }
 }
-
-function cheapClick() {
-  let statusGood = document.getElementById("good").checked;
-  let statusCheap = document.getElementById("cheap").checked;
-  let statusFast = document.getElementById("fast").checked;
-  if (statusGood == true && statusFast == true) {
-    document.getElementById("fast").checked = false;
-  }
-}
-
-function fastClick() {
-  let statusGood = document.getElementById("good").checked;
-  let statusCheap = document.getElementById("cheap").checked;
-  let statusFast = document.getElementById("fast").checked;
-  if (statusGood == true && statusCheap == true) {
-    document.getElementById("good").checked = false;
-  }
-}
-
-
