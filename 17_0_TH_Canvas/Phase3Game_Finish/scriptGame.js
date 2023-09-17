@@ -16,17 +16,23 @@ function getRandomInt(min, max) {
 }
 
 class Player {
-  constructor(x, y, radius, color) {
+  constructor(x, y, radius, color, velocity) {
     this.x = x;
     this.y = y;
     this.radius = radius;
     this.color = color;
+    this.velocity = velocity;
   }
   draw() {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     c.fillStyle = this.color;
     c.fill();
+  }
+  update() {
+    this.draw();
+    this.x = this.x + this.velocity.x;
+    this.y = this.y + this.velocity.y;
   }
 }
 
@@ -255,6 +261,7 @@ function animate() {
 }
 
 addEventListener("click", (event) => {
+
   // console.log(projectiles);
   const angle = Math.atan2(
     event.clientY - canvas.height / 2,
@@ -270,9 +277,48 @@ addEventListener("click", (event) => {
   );
 });
 
+
 startGameBtn.addEventListener("click", () => {
   init();
   animate();
   spawnEnemies();
   modalEl.style.display = "none";
+});
+
+addEventListener("keydown", ({ key }) => {
+  switch (key) {
+    case "a":
+      console.log("left");
+      keys.a.pressed = true;
+      break;
+    case "d":
+      console.log("right");
+      keys.d.pressed = true;
+      break;
+    case " ":
+      console.log("space");
+      break;
+
+    default:
+      break;
+  }
+});
+
+addEventListener("keyup", ({ key }) => {
+  switch (key) {
+    case "a":
+      console.log("left");
+      keys.a.pressed = false;
+      break;
+    case "d":
+      console.log("right");
+      keys.d.pressed = false;
+      break;
+    case " ":
+      console.log("space");
+      break;
+
+    default:
+      break;
+  }
 });
