@@ -192,7 +192,7 @@ function setNewAppleWeight() {
 }
 
 function getApple() {
-    if (apple.quantity <= 9) {
+    if (apple.quantity == 9) {
         apple.quantity += 1;
     } else if (apple.quantity <= 8) {
         apple.quantity += 2;
