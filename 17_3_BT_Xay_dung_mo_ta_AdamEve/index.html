@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="reloadData()">
+    <canvas width="700" height="700"></canvas> <br />
+
+    <table >
+      <tr>
+        <th colspan="3">Human 1</th>
+
+        <th colspan="3">Human 2</th>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name="nameA" id="nameA"  disabled></td>
+        <td><button type="button" onclick="setName('human1')">Set Name</button></td>
+        <td>Name:</td>
+        <td><input type="text" name="nameB" id="nameB"  disabled></td>
+        <td><button type="button" onclick="setName('human2')">Set Name</button></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td><input type="text" name="genderA" id="genderA"  disabled></td>
+        <td><button type="button" onclick="setGender('human1')">Set Gender</button></td>
+        <td>Gender:</td>
+        <td><input type="text" name="genderB" id="genderB"  disabled></td>
+        <td><button type="button" onclick="setGender('human2')">Set Gender</button></td>
+      </tr>
+      <tr>
+        <td>Weight:</td>
+        <td><input type="number" name="weightA" id="weightA" disabled></td>
+        <td><button type="button" onclick="setNewWeight('human1')">Set Weight</button></td>
+        <td>Weight:</td>
+        <td><input type="number" name="weightB" id="weightB"  disabled></td>
+        <td><button type="button" onclick="setNewWeight('human2')">Set Weight</button></td>
+      </tr>
+      <tr>
+        <td>Apple weight</td>
+        <td><input type="number" name="appleWeight" id="appleWeight" disabled ></td>
+        <td><button type="button" onclick="setNewAppleWeight()">Set apple weight</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="number" name="appleAmount" id="appleAmount" disabled ></td>
+        <td><button type="button" onclick="getApple()">Get apples</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Human 1:</td>
+        <td colspan="2"><button type="button"  onclick="eatApple('human1')">Eat</button></td>
+        <td>Human 2:</td>
+        <td colspan="2"><button type="button"  onclick="eatApple('human2')">Eat</button></td>
+
+      </tr>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
