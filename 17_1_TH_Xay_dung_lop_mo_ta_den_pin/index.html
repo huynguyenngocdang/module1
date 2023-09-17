@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border: 1px solid black;"></canvas> <br>
+    Status:
+    <input type="text" name="statusLamp" id="statusLamp" value="ON" disabled style="width: 35px;"> <br> <br>
+    Battery level:
+    <input type="text" name="statusBattery" id="statusBattery" disabled style="width: 35px;"> <br> 
+    <br>
+    <button type="button" onclick="changeStatus()"> Turn ON/OFF</button> <br> <br>
+    <button type="button" onclick="chargeBattery()"> Charge Battery</button> <br>
+    <script src="script.js"></script>
+</body>
+</html>
