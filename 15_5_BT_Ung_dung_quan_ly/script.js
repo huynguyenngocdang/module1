@@ -48,7 +48,11 @@ function add() {
 
 function removePhone(value) {
   let index = arrayPhone.indexOf(value);
-  arrayPhone.splice(index, 1);
+  let decision = confirm("Are you sure you want to remove?");
+  if (decision) {
+    arrayPhone.splice(index, 1);
+  }
+
   createOnLoad();
 }
 
@@ -56,11 +60,13 @@ function editPhone(value) {
   let index = arrayPhone.indexOf(value);
   // removePhone(value);
   let valueNew = prompt("Input new data");
-
+  let decision = confirm("Are you sure you want to edit?");
   // arrayPhone.splice(index,0,valueNew);
-  for (let i in arrayPhone) {
-    if (arrayPhone[i] == value) {
-      arrayPhone[i] = valueNew;
+  if (decision) {
+    for (let i in arrayPhone) {
+      if (arrayPhone[i] == value) {
+        arrayPhone[i] = valueNew;
+      }
     }
   }
   createOnLoad();

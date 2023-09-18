@@ -51,7 +51,7 @@ class Apple {
     }
   }
   getWeight(quantity) {
-    return quantity * this.weight;
+    return parseInt( quantity * this.weight);
   }
 }
 
@@ -80,7 +80,7 @@ class Human {
     }
   }
   eat() {
-    this.weight += apple.getWeight(1);
+    this.weight += parseInt(apple.getWeight(1));
     apple.decrease();
   }
   say(string) {}
@@ -192,12 +192,11 @@ function setNewAppleWeight() {
 }
 
 function getApple() {
-    if (apple.quantity == 9) {
-        apple.quantity += 1;
-    } else if (apple.quantity <= 8) {
-        apple.quantity += 2;
-    }
-   else {
+  if (apple.quantity == 9) {
+    apple.quantity += 1;
+  } else if (apple.quantity <= 8) {
+    apple.quantity += 2;
+  } else {
     alert("Full Apple");
   }
 

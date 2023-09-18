@@ -138,6 +138,9 @@ function chargeBattery() {
   } else if ((lamp.battery = 95)) {
     lamp.battery += 5;
   } 
+  if (lamp.battery == 100) {
+    alert("Battery is full")
+  }
 }
 
 animate();
