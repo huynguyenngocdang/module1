@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        
+    </style>
+</head>
+<body>
+    <table >
+        
+        <thead>
+            <tr>
+                <th colspan="2"> Create Table</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: end;">Row :</td>
+                <td><input type="number" name="inputRow" id="inputRow" value="20"></td>
+            </tr>
+            <tr>
+                <td style="text-align: end;"> Column :</td>
+                <td><input type="text" name="inputCol" id="inputCol" value="20"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="button" onclick="createTable()">Create Table</button></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <span id="tableCreate"></span>
+
+  
+    
+    <script src="script.js"></script>
+</body>
+</html>
