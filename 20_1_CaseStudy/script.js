@@ -154,6 +154,8 @@ function animate() {
   scoreResult.innerHTML = score;
 
   if (ball.y >= canvas.height) {
+    
+    smashSound.currentTime = 0.7
     smashSound.play();
     cancelAnimationFrame(animationId);
     modalEl.style.display = "flex";
