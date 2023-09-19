@@ -17,6 +17,12 @@ const scoreResult = document.querySelector("#scoreResult");
 var boingSound = new Audio("sound/boing.wav");
 var smashSound = new Audio("sound/smash.wav");
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
 class Player {
   constructor(x, y, width, height) {
     this.x = x + 20;
@@ -106,7 +112,7 @@ let frame = 0;
 let animationId;
 function animate() {
   animationId = requestAnimationFrame(animate);
-  ctx.fillStyle = "white";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   player.update();
   ball.update();
