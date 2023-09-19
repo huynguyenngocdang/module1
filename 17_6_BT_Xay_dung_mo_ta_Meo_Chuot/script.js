@@ -158,6 +158,11 @@ function animate() {
           mouse.height -
           player.height <
         1
+
+        // mouse.y - mouse.height <= player.y + player.height &&
+        // mouse.x + mouse.width >= player.x &&
+        // mouse.x - mouse.width <= player.x + player.width &&
+        // mouse.y + mouse.height >= player.y
       ) {
         score += 5;
         mouse.status = "dead";
@@ -230,6 +235,7 @@ function randomInt(min, max) {
 }
 
 startGameBtn.addEventListener("click", () => {
+
   player = new Player();
   mouses = [];
   animate();

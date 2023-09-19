@@ -40,8 +40,8 @@ function createTable() {
 let currentPlayer = 1;
 function check(x, y) {
   let box = document.getElementById(`row${x}col${y}`);
-  this.x = x;
-  this.y = y;
+//   this.x = x;
+//   this.y = y;
   if (box.innerHTML === " ") {
     if (currentPlayer % 2 == 0) {
       document.getElementById(`row${x}col${y}`).innerHTML = "O";
@@ -52,7 +52,7 @@ function check(x, y) {
   } else {
     alert("This box is not empty");
   }
-  winCheck(this.x, this.y);
+  winCheck(x, y);
 }
 
 function winCheck(x, y) {
