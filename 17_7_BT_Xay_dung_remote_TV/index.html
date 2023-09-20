@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="player-container">
+    <div id="player"></div>
+  </div>
+  <br>
+  <!-- <form id="form">
+    <input type="url"  id="url" placeholder="enter YT video URL" required>
+    <button> Embed Video</button>
+  </form> <br> -->
+  Vol : <span id="currentVol"></span> <br>
+  <button onclick="setVolumeChanel(10)"> Vol +</button>
+  <button onclick="setVolumeChanel(-10)"> Vol -</button> <br>
+  Chanel : <span id="currentChanel"></span> <br>
+  <table style="margin-left: 33px;">
+
+   <tr>
+      <td><button onclick="changeChanel(0)"> 0</button></td>
+      <td><button onclick="changeChanel(1)"> 1</button></td>
+      <td><button onclick="changeChanel(2)"> 2</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="changeChanel(3)"> 3</button></td>
+      <td><button onclick="changeChanel(4)"> 4</button></td>
+      <td><button onclick="changeChanel(5)"> 5</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="changeChanel(6)"> 6</button></td>
+      <td><button onclick="changeChanel(7)"> 7</button></td>
+      <td><button onclick="changeChanel(8)"> 8</button></td>
+    </tr>
+  </table>
+  
+  
+  
+  <button onclick="playChanel()"> Play</button> 
+  <button onclick="pauseChanel()"> Pause</button> 
+  <button onclick="stopChanel()"> Stop</button> 
+  
+
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
