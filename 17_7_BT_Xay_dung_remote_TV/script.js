@@ -77,25 +77,25 @@ class TV {
   setVolumeChanelTv(value) {
     value = parseInt(value);
 
-    if (this.volume >= 90 && this.volume <= 10) {
-      this.volume += parseInt(value);
-    }
+    // if (this.volume >= 90 && this.volume <= 10) {
+    //   this.volume += parseInt(value);
+    // }
 
-    if (this.volume === 100) {
-      if (value === 10) {
-        alert("Max volume allowed");
-      } else if (value === -10) {
-        this.volume += parseInt(value);
-      }
-    }
+    // if (this.volume === 100) {
+    //   if (value === 10) {
+    //     alert("Max volume allowed");
+    //   } else if (value === -10) {
+    //     this.volume += parseInt(value);
+    //   }
+    // }
 
-    if (this.volume === 0) {
-      if (value === -10) {
-        alert("Min volume allowed");
-      } else if (value === 10) {
-        this.volume += parseInt(value);
-      }
-    }
+    // if (this.volume === 0) {
+    //   if (value === -10) {
+    //     alert("Min volume allowed");
+    //   } else if (value === 10) {
+    //     this.volume += parseInt(value);
+    //   }
+    // }
     return this.volume;
   }
 }
