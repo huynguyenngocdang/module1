@@ -10,7 +10,7 @@ function fakeText() {
 
   for (let index = 0; index < inputLength; index++) {
     resultPrint += txtArray[index];
-    if (index == 214) {
+    if (index == txtArray.length) {
       document.getElementById("txtarea").value = "";
       resultPrint = "";
     }
