@@ -23,14 +23,14 @@ function getArray(array, min, max, numberCount) {
 }
 
 function evaluateLargest(array) {
-  let largestVal, largestIndex, resultString;
+  let largestVal, resultString;
+   largestVal = array[0];
   for (let index = 0; index < array.length; index++) {
-    if (array[index] > array[index + 1]) {
-      largestIndex = index;
-      largestVal = array[index];
+    if (largestVal < array[index] ) {
+      largestVal = array[index]
     }
   }
-  resultString = "Số lớn nhất là " + largestVal + " ở vị trí " + largestIndex;
+  resultString = "Số lớn nhất là " + largestVal + " ở vị trí " + array.indexOf(largestVal);
   return resultString;
 }
 
@@ -200,6 +200,7 @@ function bai7Check() {
   } else {
     result = "V is in the array";
     bai7Array.splice(bai7Array.indexOf(numberCheck), 1);
+    bai7Array.push(0)
   }
   document.getElementById("printBai7Array").innerHTML = bai7Array;
   document.getElementById("bai7Result").innerHTML = result;
