@@ -145,7 +145,7 @@ function animate() {
     ball.x - ball.radius <= player.x + player.width &&
     ball.y + ball.radius >= player.y
   ) {
-    ball.velocity.dx = -(ball.velocity.dx + Math.ceil( Math.random()));
+    // ball.velocity.dx = -(ball.velocity.dx + Math.ceil( Math.random()));
     ball.velocity.dy = -(ball.velocity.dy + Math.ceil( Math.random()));
 
     boingSound.currentTime = 0;
