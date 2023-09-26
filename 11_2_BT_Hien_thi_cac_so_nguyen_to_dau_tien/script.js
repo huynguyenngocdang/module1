@@ -2,20 +2,32 @@ function primeList() {
   let countMax = document.getElementById("inputCount").value;
   let count = 0;
   let text = ""
-  let N = 2;
+  let thisNumber = 2;
+
   while (count < countMax) {
-    let countUoc = 0;
-    for (let i = 2; i < N; i++) {
-      if (N % i === 0) {
-        countUoc++;
-      }
-    }
-    if (countUoc == 0) {
-      text += "Number " + (count + 1) + " is " + N + "<br>";
+    if (isPrime(thisNumber)) {
+      text += (count + 1) + ". " + thisNumber + "<br/>"
       count++;
-    }
-    N++;
+    } 
+    thisNumber++;
   }
 
   document.getElementById("result").innerHTML = text;
+}
+
+function isPrime(value) {
+  let isPrime = true;
+  if (value < 2) {
+    return false;
+  } else {
+    let i = 2
+    while (i <= Math.sqrt(value)) {
+        if (value % i == 0) {
+          isPrime = false;
+          break;
+        }
+        i++;
+    }
+  }
+    return isPrime 
 }

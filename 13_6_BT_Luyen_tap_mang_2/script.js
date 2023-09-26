@@ -143,5 +143,4 @@ function bai6Function() {
       bai6Array[index] = replaceCharacter;
     }
   }
-  document.getElementById("inputBai6").value = bai6Array.join("");
 }

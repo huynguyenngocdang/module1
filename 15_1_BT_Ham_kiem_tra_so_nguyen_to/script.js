@@ -1,25 +1,16 @@
 function primeList() {
   let countMax = parseInt(document.getElementById("inputCount").value);
-  let countUoc = 0;
-  let countSNT = 0;
+  let countPrime = 0;
+  let thisNumber = 2;
   let text = "";
-  for (let i = 2; i < 10000; i++) {
-    if (countSNT < countMax) {
-      for (let j = 1; j <= i; j++) {
-        if (i % j == 0) {
-          countUoc += 1;
-        }
+  while (countPrime < countMax) {
+      if (primeCheck(thisNumber)) {
+        text += (countPrime + 1) + ". " + thisNumber + "<br/>"
+        countPrime += 1;
       }
-      if (countUoc == 2) {
-        countSNT += 1;
-        text += i + "<br>";
-      }
-      countUoc = 0;
-    } else {
-      break;
-    }
+      thisNumber += 1;
   }
-
+  
   document.getElementById("result").innerHTML = text;
 }
 
@@ -37,15 +28,13 @@ function primeResult() {
 
 function primeCheck(params) {
   let countUoc = 0;
-  for (let i = 1; i <= params; i++) {
+  let isPrime = true;
+  for (let i = 2; i <= Math.sqrt(params); i++) {
       if (params % i == 0) {
-        countUoc += 1;
+        isPrime = false;
+        break;
       }
   }
-  if (countUoc == 2) {
-    return true;
-  } else {
-    return false;
-  }
+  return isPrime;
 
 }
