@@ -16,6 +16,8 @@ const startGameBtn = document.querySelector("#startGameBtn");
 const scoreResult = document.querySelector("#scoreResult");
 var boingSound = new Audio("sound/boing.wav");
 var smashSound = new Audio("sound/smash.wav");
+var themeSong = new Audio("sound/ThemeSong.mp3");
+var endSound = new Audio("sound/smb_mariodie.wav");
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -146,14 +148,14 @@ function animate() {
     ball.y + ball.radius >= player.y
   ) {
     // ball.velocity.dx = -(ball.velocity.dx + Math.ceil( Math.random()));
-    ball.velocity.dy = -(ball.velocity.dy + Math.ceil( Math.random()));
+    ball.velocity.dy = -(ball.velocity.dy + 1);
 
     boingSound.currentTime = 0;
     boingSound.play();
   }
 
   frame++;
-  if (frame % 1000) {
+  if (frame % 100 == 0) {
     score++;
   }
   scoreEl.innerHTML = score;
@@ -163,6 +165,8 @@ function animate() {
     
     smashSound.currentTime = 0.7
     smashSound.play();
+    themeSong.pause();
+    endSound.play();
     cancelAnimationFrame(animationId);
     modalEl.style.display = "flex";
     score = 0;
@@ -172,7 +176,8 @@ function animate() {
 startGameBtn.addEventListener("click", () => {
     startGame();
     animate();
-
+    themeSong.currentTime = 0;
+    themeSong.play();
   modalEl.style.display = "none";
 });
 
