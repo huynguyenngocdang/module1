@@ -2,14 +2,19 @@ const feetConversion = 3.2808;
 
 function temperatureConverterToC(valueTemp) {
   inputTemp = parseFloat(valueTemp);
-  document.getElementById("inputCelcius").value = ((inputTemp-32) / 1.8).toFixed(2);
+  document.getElementById("inputCelcius").value = (
+    (inputTemp - 32) /
+    1.8
+  ).toFixed(2);
 }
 
 function temperatureConverterToF(valueTemp) {
   inputTemp = parseFloat(valueTemp);
-  document.getElementById("inputFahrenheit").value = (inputTemp * 1.8 + 32).toFixed(2);
+  document.getElementById("inputFahrenheit").value = (
+    inputTemp * 1.8 +
+    32
+  ).toFixed(2);
 }
-
 
 function chuyenF() {
   let c = document.getElementById("doC").value;
@@ -26,15 +31,39 @@ function chuyenC() {
 const feet_conversion = 0.305;
 const meter_conversion = 3.279;
 
-function temperatureConverterToM(valueInput) {
-    let inputValue = parseFloat(valueInput);
-    document.getElementById("inputMeter").value = (inputValue*feet_conversion).toFixed(3);
+
+function convertMeterFeet(inputMeasurement, id) {
+  let thisMeasure = new Measurement(inputMeasurement);
+  
+  switch (id) {
+    case "inputMeter":
+      document.getElementById("inputFeet").value = thisMeasure.getFeet();
+      break;
+
+      case "inputFeet":
+        document.getElementById("inputMeter").value = thisMeasure.getMeter();
+        break;
+  
+    default:
+      alert("Invalid input")
+      break;
+  }
 }
 
-function temperatureConverterToF(valueInput) {
-    let inputValue = parseFloat(valueInput);
-    document.getElementById("inputFeet").value = (inputValue*meter_conversion).toFixed(3);
+
+
+class Measurement {
+  constructor(measure) {
+    this.measure = measure;
+  }
+  getFeet() {
+    return this.measure * 3.279;
+  }
+  getMeter() {
+    return this.measure * 0.305;
+  }
 }
+
 
 function chuyenFeet() {
   let meter = document.getElementById("meter").value;
@@ -145,7 +174,7 @@ function bai9Function() {
   } else {
     textResult = "Đây không phải là tam giác";
   }
-  
+
   document.getElementById("resultBai9").innerHTML = textResult;
 }
 

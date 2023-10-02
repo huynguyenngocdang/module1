@@ -70,14 +70,14 @@
       <tr>
         <td>Meter</td>
         <td><input type="number" name="inputMeter" id="inputMeter" 
-          oninput="temperatureConverterToF(this.value)"
-          onchange="temperatureConverterToF(this.value)"></td>
+          oninput="convertMeterFeet(this.value, this.id)"
+          onchange="convertMeterFeet(this.value, this.id)"></td>
         </tr>
         <tr>
       <td>Feet</td>
       <td><input type="number" name="inputFeet" id="inputFeet" 
-          oninput="temperatureConverterToM(this.value)"
-          onchange="temperatureConverterToM(this.value)"></td>
+          oninput="convertMeterFeet(this.value, this.id)"
+          onchange="convertMeterFeet(this.value, this.id)"></td>
     </tr>
     </table>
     <hr />

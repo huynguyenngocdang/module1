@@ -145,7 +145,7 @@ function spawnEnemies() {
       new Enemy({
         position: {
           x: randomInt(0, canvas.width - 44),
-          y: 0,
+          y: -44,
         },
         velocity: {
           dx: 0,
