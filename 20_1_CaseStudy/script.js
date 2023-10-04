@@ -4,6 +4,7 @@ canvas.height = innerHeight;
 canvas.width = innerWidth;
 const PLAYERPADDINGUP = 100;
 const BALLPADDINGDOWN = 20;
+const SMASHSOUNDBEGINTIME = 0.7;
 const TIMEPERFRAME = 100;
 const PLAYERWIDTH = 150;
 const PLAYERHEIGHT = 50;
@@ -136,7 +137,7 @@ function animate() {
     boingSound.play();
   }
 
-  if (ball.y >= canvas.height || ball.y - ball.radius <= 0) {
+  if (ball.y - ball.radius <= 0) {
     ball.velocity.dy = -ball.velocity.dy;
   }
 
@@ -164,8 +165,8 @@ function animate() {
   scoreEl.innerHTML = score;
   scoreResult.innerHTML = score;
 
-  if (ball.y >= canvas.height) {
-    smashSound.currentTime = 0.7;
+  if (ball.y + ball.radius >= canvas.height) {
+    smashSound.currentTime = SMASHSOUNDBEGINTIME;
     smashSound.play();
     themeSong.pause();
     endSound.play();
