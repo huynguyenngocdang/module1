@@ -79,7 +79,7 @@ class Ball {
 
 let player = new Player(
   canvas.width / 2 - PLAYERWIDTH / 2,
-  canvas.height - PLAYERHEIGHT / 2 - PLAYERPADDINGUP,
+  canvas.height - PLAYERHEIGHT - PLAYERPADDINGUP,
   PLAYERWIDTH,
   PLAYERHEIGHT
 );
@@ -93,7 +93,7 @@ let ball = new Ball(
 function startGame() {
   player = new Player(
     canvas.width / 2 - PLAYERWIDTH / 2,
-    canvas.height - PLAYERHEIGHT / 2 - PLAYERPADDINGUP,
+    canvas.height - PLAYERHEIGHT  - PLAYERPADDINGUP,
     PLAYERWIDTH,
     PLAYERHEIGHT
   );
@@ -139,12 +139,11 @@ function animate() {
 
   if (ball.y - ball.radius <= 0) {
     ball.velocity.dy = -ball.velocity.dy;
-  }
-
-  if (ball.y - ball.radius <= 0) {
     boingSound.currentTime = 0;
     boingSound.play();
   }
+
+
   if (
     ball.y - ball.radius <= player.y + player.height &&
     ball.x + ball.radius >= player.x &&
