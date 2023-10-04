@@ -30,7 +30,7 @@ function getRandomInt(min, max) {
 
 class Player {
   constructor(x, y, width, height) {
-    this.x = x + 20;
+    this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
