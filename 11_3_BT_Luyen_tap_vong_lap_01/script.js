@@ -66,7 +66,12 @@ function bai4Function() {
   text = String(text).slice(0, -3);
   listChia5 = String(listChia5).slice(0, -3);
   document.getElementById("resultBai4").innerHTML =
-    "Liệt kê " + count+ " số: " + text + "<br/> Các số chia hết cho 5: " + listChia5;
+    "Liệt kê " +
+    count +
+    " số: " +
+    text +
+    "<br/> Các số chia hết cho 5: " +
+    listChia5;
 }
 
 function bai5Function() {
@@ -81,7 +86,7 @@ function bai5Function() {
     sum = thisValue + nextValue;
     nextValue = thisValue;
     thisValue = sum;
-    sumTotal += sum; 
+    sumTotal += sum;
     text += thisValue + " + ";
   }
   text = String(text).slice(0, -3);
@@ -106,20 +111,42 @@ function bai6Function() {
 function bai7Function() {
   let count = document.getElementById("inputBai7").value;
   let text = "";
+  // for (let i = 1; i <= count; i++) {
+  //   if (i % 3 == 0) {
+  //     if (i % 5 == 0) {
+  //       text += "FizzBuzz <br/>";
+  //     } else {
+  //       text += "Fizz <br/>";
+  //     }
+  //   } else if (i % 5 == 0) {
+  //     text += "Buzz <br/>";
+  //   } else {
+  //     text += i + "<br/>";
+  //   }
+  // }
   for (let i = 1; i <= count; i++) {
-    if (i % 3 == 0) {
-      if (i % 5 == 0) {
-        text += "FizzBuzz <br/>";
-      } else {
-        text += "Fizz <br/>";
-      }
-    } else if (i % 5 == 0) {
-      text += "Buzz <br/>";
-    } else {
-      text += i + "<br/>";
-    }
+    text += isFizzBuzz(i) + "<br/>";
   }
   document.getElementById("resultBai7").innerHTML = text;
+}
+
+function isFizzBuzz(number) {
+  let isFizz = number % 3 == 0;
+  let isBuzz = number % 5 == 0;
+  if (isFizz && isBuzz) {
+    return "FizzBuzz";
+  } 
+
+  if (isFizz) {
+    return "Fizz";
+  } 
+
+  if (isBuzz) {
+    return "Buzz";
+  }  
+  
+    return number;
+  
 }
 
 function bai8Function() {

@@ -3,8 +3,6 @@ const ctx = canvas.getContext("2d");
 canvas.height = innerHeight;
 canvas.width = innerWidth;
 const PLAYERPADDINGUP = 100;
-const BALLPADDINGDOWN = 20;
-const TIMEPERFRAME = 100;
 const PLAYERWIDTH = 150;
 const PLAYERHEIGHT = 50;
 const PLAYERCOLOR = "rgba(39, 149, 245, 0.8)";
@@ -23,14 +21,14 @@ var themeSong = new Audio("sound/ThemeSong.mp3");
 var endSound = new Audio("sound/smb_mariodie.wav");
 
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 class Player {
   constructor(x, y, width, height) {
-    this.x = x + 20;
+    this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
@@ -85,7 +83,7 @@ let player = new Player(
 
 let ball = new Ball(
   canvas.width / 2 - BALLRADIUS / 2,
-  BALLPADDINGDOWN + BALLRADIUS / 2,
+  BALLRADIUS / 2,
   BALLRADIUS
 );
 
@@ -98,7 +96,7 @@ function startGame() {
   );
   ball = new Ball(
     canvas.width / 2 - BALLRADIUS / 2,
-    BALLPADDINGDOWN + BALLRADIUS / 2,
+    BALLRADIUS / 2,
     BALLRADIUS
   );
   ball.velocity.dx = BALLSPEED;
@@ -124,7 +122,7 @@ function animate() {
 
   if (keys.a.pressed && player.x > 0) {
     player.velocity.dx = -PLAYERSPEED;
-  } else if (keys.d.pressed && player.x + player.width < canvas.width) {
+  } else if (keys.d.pressed && player.x + player.width / 2 < canvas.width) {
     player.velocity.dx = PLAYERSPEED;
   } else {
     player.velocity.dx = 0;
@@ -158,14 +156,15 @@ function animate() {
   }
 
   frame++;
-  if (frame % TIMEPERFRAME == 0) {
+  if (frame % 100 == 0) {
     score++;
   }
   scoreEl.innerHTML = score;
   scoreResult.innerHTML = score;
 
   if (ball.y >= canvas.height) {
-    smashSound.currentTime = 0.7;
+    
+    smashSound.currentTime = 0.7
     smashSound.play();
     themeSong.pause();
     endSound.play();
@@ -176,10 +175,10 @@ function animate() {
 }
 
 startGameBtn.addEventListener("click", () => {
-  startGame();
-  animate();
-  themeSong.currentTime = 0;
-  themeSong.play();
+    startGame();
+    animate();
+    themeSong.currentTime = 0;
+    themeSong.play();
   modalEl.style.display = "none";
 });
 
@@ -210,3 +209,4 @@ addEventListener("keyup", ({ key }) => {
       break;
   }
 });
+
